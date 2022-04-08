@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>后台登录界面</title>
+    <link rel="stylesheet" th:href="@{/dist/css/zui.min.css}">
+    <link rel="stylesheet" th:href="@{/dist/css/bootstrap.min.css}">
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script th:src="@{/dist/lib/jquery/jquery.js}"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script th:src="@{/dist/js/zui.min.js}"></script>
+</head>
+<body th:background="@{/img/login4.jpg}" style="background-size: 100%">
+<div class="container-fixed-md" style="/*background-color: #039BE5*/;height: 600px;" >
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-xs-5 col-xs-offset-5">
+            <div class="panel">
+                <div class=" panel-heading " style="background-color: #039BE5;text-align: center;font-size: 20px;">
+                    <b>欢迎登录</b>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group" >
+                        <span class="input-group-addon"><i class="icon icon-user"></i></span>
+                        <input type="number" class="form-control" onchange="changeeventrusername()" id="username" placeholder="手机号"  data-toggle="popover" >
+                        <span id="iusername" class="input-group-addon"><i class="icon icon-check"></i></span>
+                    </div>
+                    <div class="input-group" style="margin-top:10px ;">
+                        <span class="input-group-addon"><i class="icon icon-lock"></i></span>
+                        <input type="password" id="password" class="form-control" onchange="changeeventrpassword()" placeholder="密码">
+                        <span id="ipassword" class="input-group-addon"><i class="icon icon-check"></i></span>
+                    </div>
+                    <div class="input-group" style="margin-top:10px ;width: 150px">
+                        <span class="input-group-addon"><i class="icon icon-lock"></i></span>
+                        <input type="text" id="code" class="form-control"  placeholder="验证码">
+                    </div>
+                    <div style="margin-left: 180px;margin-top: -35px"><img th:src="@{/user/getImage}" alt=""></div>
+
+                    <div class="row" style="margin-top: 10px">
+                        <div class="col-xs-4"><input type="checkbox" value="1">记住密码</div>
+                        <div class="col-xs-4 col-xs-offset-4" style="text-align: right;"><a>忘记密码</a></div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary" type="button" style="width:340px;" onclick="userlogin()">登录</button>
+                    <div style="margin-top: 5px;">还没有账号吗？&nbsp;<a data-toggle="modal" data-target="#userregistermyModal">立即注册</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="userregistermyModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">用户注册</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group" style="margin-top:10px ;">
+                        <span class="input-group-addon"><i class="icon icon-lock"></i></span>
+                        <input type="text" class="form-control" onchange="changeeventrusername2()" id="rphone" placeholder="姓名">
+                        <span id="irphone" class="input-group-addon"><i class="icon icon-check"></i></span>
+                    </div>
+                    <div class="input-group" style="margin-top:10px ;" >
+                        <span class="input-group-addon"><i class="icon icon-user"></i></span>
+                        <input type="number" class="form-control" onchange="changeeventrusername()" id="rusername" placeholder="手机号"  data-toggle="popover" >
+                        <span id="irusername" class="input-group-addon"><i class="icon icon-check"></i></span>
+                    </div>
+                    <div class="input-group" style="margin-top:10px ;">
+                        <span class="input-group-addon"><i class="icon icon-lock"></i></span>
+                        <input type="password" class="form-control" onchange="changeeventrpassword()" id="rpassword" placeholder="密码">
+                        <span id="irpassword" class="input-group-addon"><i class="icon icon-check"></i></span>
+                    </div>
+                    <div class="input-group" style="margin-top:10px ;">
+                        <span class="input-group-addon"><i class="icon icon-lock"></i></span>
+                        <input type="password" class="form-control" onchange="changeeventrpassword2()" id="rpassword2" placeholder="再次输入密码">
+                        <span id="irpassword2" class="input-group-addon"><i class="icon icon-check"></i></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="useregister()">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/js/login.js}"></script>
+<script th:src="@{/js/common.js}"></script>
+</html>

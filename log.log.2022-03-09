@@ -1,0 +1,6 @@
+2022-03-09 11:30:12  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.login参数长度：1
+2022-03-09 11:30:12  [ http-nio-8888-exec-1:130 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.login参数信息：null第1个参数:"1"     
+2022-03-09 11:30:12  [ http-nio-8888-exec-1:138 ] - [ INFO ]  返回信息{"adminId":1,"adminName":"haha","adminPassword":"123456","level":1}
+2022-03-09 11:30:14  [ http-nio-8888-exec-9:1584 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.login参数长度：1
+2022-03-09 11:30:14  [ http-nio-8888-exec-9:1587 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.login参数信息：null第1个参数:"1"     
+2022-03-09 11:30:14  [ http-nio-8888-exec-9:1591 ] - [ INFO ]  返回信息{"adminId":1,"adminName":"haha","adminPassword":"123456","level":1}

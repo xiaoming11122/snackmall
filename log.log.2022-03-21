@@ -1,0 +1,869 @@
+2022-03-21 10:31:28  [ http-nio-8888-exec-2:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:31:28  [ http-nio-8888-exec-2:5 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:31:28  [ http-nio-8888-exec-2:31 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:31:28  [ http-nio-8888-exec-8:73 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:31:28  [ http-nio-8888-exec-8:193 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:31:28  [ http-nio-8888-exec-8:193 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647829888290,"maxInactiveInterval":1800,"new":true,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:31:28  [ http-nio-8888-exec-8:193 ] - [ INFO ]  返回信息null
+2022-03-21 10:32:51  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:32:51  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:32:51  [ http-nio-8888-exec-1:34 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:32:52  [ http-nio-8888-exec-7:211 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:32:52  [ http-nio-8888-exec-7:333 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:32:52  [ http-nio-8888-exec-7:333 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647829972044,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:32:52  [ http-nio-8888-exec-7:333 ] - [ INFO ]  返回信息null
+2022-03-21 10:32:53  [ http-nio-8888-exec-10:1534 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:32:53  [ http-nio-8888-exec-10:1536 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:32:53  [ http-nio-8888-exec-10:1536 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:32:53  [ http-nio-8888-exec-2:1565 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:32:53  [ http-nio-8888-exec-2:1574 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:32:53  [ http-nio-8888-exec-2:1574 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647829973389,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:32:53  [ http-nio-8888-exec-2:1575 ] - [ INFO ]  返回信息null
+2022-03-21 10:34:37  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:34:37  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:34:37  [ http-nio-8888-exec-1:35 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:34:37  [ http-nio-8888-exec-7:202 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:34:37  [ http-nio-8888-exec-7:316 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:34:37  [ http-nio-8888-exec-7:316 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830077556,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:34:37  [ http-nio-8888-exec-7:316 ] - [ INFO ]  返回信息null
+2022-03-21 10:35:30  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:35:30  [ http-nio-8888-exec-1:4 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:35:30  [ http-nio-8888-exec-1:26 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:35:30  [ http-nio-8888-exec-5:198 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:35:30  [ http-nio-8888-exec-5:310 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:35:30  [ http-nio-8888-exec-5:310 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830130704,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:35:30  [ http-nio-8888-exec-5:311 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:09  [ http-nio-8888-exec-2:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:09  [ http-nio-8888-exec-2:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:09  [ http-nio-8888-exec-2:25 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:09  [ http-nio-8888-exec-3:197 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:09  [ http-nio-8888-exec-3:305 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:09  [ http-nio-8888-exec-3:305 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830229339,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:09  [ http-nio-8888-exec-3:305 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:27  [ http-nio-8888-exec-10:18105 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:27  [ http-nio-8888-exec-10:18105 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:27  [ http-nio-8888-exec-10:18106 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:27  [ http-nio-8888-exec-1:18131 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:27  [ http-nio-8888-exec-1:18137 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:27  [ http-nio-8888-exec-1:18138 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830247256,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:27  [ http-nio-8888-exec-1:18138 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:27  [ http-nio-8888-exec-9:18751 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:27  [ http-nio-8888-exec-9:18752 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:27  [ http-nio-8888-exec-9:18756 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:27  [ http-nio-8888-exec-8:18781 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:27  [ http-nio-8888-exec-8:18786 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:27  [ http-nio-8888-exec-8:18786 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830247906,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:27  [ http-nio-8888-exec-8:18786 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:37  [ http-nio-8888-exec-1:28730 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:37  [ http-nio-8888-exec-1:28731 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:37  [ http-nio-8888-exec-1:28731 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:37  [ http-nio-8888-exec-10:28757 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:37  [ http-nio-8888-exec-10:28765 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:37  [ http-nio-8888-exec-10:28765 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830257883,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:37  [ http-nio-8888-exec-10:28765 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:38  [ http-nio-8888-exec-8:29328 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:38  [ http-nio-8888-exec-8:29329 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:38  [ http-nio-8888-exec-8:29330 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:38  [ http-nio-8888-exec-6:29353 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:38  [ http-nio-8888-exec-6:29360 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:38  [ http-nio-8888-exec-6:29360 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830258479,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:38  [ http-nio-8888-exec-6:29360 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:39  [ http-nio-8888-exec-10:29913 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:39  [ http-nio-8888-exec-10:29914 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:39  [ http-nio-8888-exec-10:29914 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:39  [ http-nio-8888-exec-1:29938 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:39  [ http-nio-8888-exec-1:29946 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:39  [ http-nio-8888-exec-1:29946 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830259064,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:39  [ http-nio-8888-exec-1:29946 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:39  [ http-nio-8888-exec-6:30577 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:37:39  [ http-nio-8888-exec-6:30578 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:37:39  [ http-nio-8888-exec-6:30578 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:37:39  [ http-nio-8888-exec-7:30606 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:37:39  [ http-nio-8888-exec-7:30613 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:37:39  [ http-nio-8888-exec-7:30614 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830259732,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:37:39  [ http-nio-8888-exec-7:30614 ] - [ INFO ]  返回信息null
+2022-03-21 10:37:48  [ http-nio-8888-exec-1:39341 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 10:37:48  [ http-nio-8888-exec-1:39500 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:""     第2个参数:""     
+2022-03-21 10:37:48  [ http-nio-8888-exec-1:39501 ] - [ INFO ]  返回信息0
+2022-03-21 10:38:51  [ http-nio-8888-exec-2:102582 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:38:51  [ http-nio-8888-exec-2:102582 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:38:51  [ http-nio-8888-exec-2:102583 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:38:51  [ http-nio-8888-exec-9:102608 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:38:51  [ http-nio-8888-exec-9:102613 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:38:51  [ http-nio-8888-exec-9:102614 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830331733,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:38:51  [ http-nio-8888-exec-9:102614 ] - [ INFO ]  返回信息null
+2022-03-21 10:39:46  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:39:46  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:39:46  [ http-nio-8888-exec-1:25 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:39:46  [ http-nio-8888-exec-9:200 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:39:47  [ http-nio-8888-exec-9:306 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:39:47  [ http-nio-8888-exec-9:306 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830386984,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:39:47  [ http-nio-8888-exec-9:307 ] - [ INFO ]  返回信息null
+2022-03-21 10:40:26  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:40:26  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:40:26  [ http-nio-8888-exec-1:27 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:40:26  [ http-nio-8888-exec-5:201 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:40:27  [ http-nio-8888-exec-5:309 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:40:27  [ http-nio-8888-exec-5:309 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830426965,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:40:27  [ http-nio-8888-exec-5:309 ] - [ INFO ]  返回信息null
+2022-03-21 10:40:51  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:40:51  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:40:51  [ http-nio-8888-exec-1:33 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:40:51  [ http-nio-8888-exec-8:200 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:40:52  [ http-nio-8888-exec-8:317 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:40:52  [ http-nio-8888-exec-8:317 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830451916,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:40:52  [ http-nio-8888-exec-8:317 ] - [ INFO ]  返回信息null
+2022-03-21 10:41:26  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:41:26  [ http-nio-8888-exec-1:12 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:41:26  [ http-nio-8888-exec-1:33 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:41:26  [ http-nio-8888-exec-7:206 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:41:26  [ http-nio-8888-exec-7:315 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:41:26  [ http-nio-8888-exec-7:315 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830486747,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:41:26  [ http-nio-8888-exec-7:315 ] - [ INFO ]  返回信息null
+2022-03-21 10:42:42  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:42:42  [ http-nio-8888-exec-1:5 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:42:42  [ http-nio-8888-exec-1:38 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:42:42  [ http-nio-8888-exec-3:221 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:42:42  [ http-nio-8888-exec-3:335 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:42:42  [ http-nio-8888-exec-3:336 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830562327,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:42:42  [ http-nio-8888-exec-3:336 ] - [ INFO ]  返回信息null
+2022-03-21 10:43:35  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:43:35  [ http-nio-8888-exec-1:4 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:43:35  [ http-nio-8888-exec-1:33 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:43:35  [ http-nio-8888-exec-8:204 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:43:35  [ http-nio-8888-exec-8:318 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:43:35  [ http-nio-8888-exec-8:319 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830615299,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:43:35  [ http-nio-8888-exec-8:319 ] - [ INFO ]  返回信息null
+2022-03-21 10:44:00  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:44:00  [ http-nio-8888-exec-1:4 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:44:00  [ http-nio-8888-exec-1:33 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:44:00  [ http-nio-8888-exec-8:214 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:44:00  [ http-nio-8888-exec-8:325 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:44:00  [ http-nio-8888-exec-8:325 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830640420,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:44:00  [ http-nio-8888-exec-8:325 ] - [ INFO ]  返回信息null
+2022-03-21 10:44:27  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:44:27  [ http-nio-8888-exec-1:4 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:44:27  [ http-nio-8888-exec-1:35 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:44:28  [ http-nio-8888-exec-7:225 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:44:28  [ http-nio-8888-exec-7:333 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:44:28  [ http-nio-8888-exec-7:333 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830668075,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:44:28  [ http-nio-8888-exec-7:334 ] - [ INFO ]  返回信息null
+2022-03-21 10:44:45  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:44:45  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:44:45  [ http-nio-8888-exec-1:33 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:44:45  [ http-nio-8888-exec-4:210 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:44:45  [ http-nio-8888-exec-4:324 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:44:45  [ http-nio-8888-exec-4:325 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830685363,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:44:45  [ http-nio-8888-exec-4:325 ] - [ INFO ]  返回信息null
+2022-03-21 10:44:59  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 10:44:59  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 10:44:59  [ http-nio-8888-exec-1:31 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 10:44:59  [ http-nio-8888-exec-8:207 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 10:44:59  [ http-nio-8888-exec-8:325 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 10:44:59  [ http-nio-8888-exec-8:325 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647830699265,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 10:44:59  [ http-nio-8888-exec-8:325 ] - [ INFO ]  返回信息null
+2022-03-21 10:45:16  [ http-nio-8888-exec-9:17431 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 10:45:16  [ http-nio-8888-exec-9:17589 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:"12312312312"     第2个参数:"12312312"     
+2022-03-21 10:45:16  [ http-nio-8888-exec-9:17590 ] - [ INFO ]  返回信息0
+2022-03-21 10:46:41  [ http-nio-8888-exec-2:102703 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 10:46:41  [ http-nio-8888-exec-2:102720 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:"1234567890"     第2个参数:"1234567890"     
+2022-03-21 10:46:41  [ http-nio-8888-exec-2:102721 ] - [ INFO ]  返回信息0
+2022-03-21 10:47:12  [ http-nio-8888-exec-5:133693 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 10:47:12  [ http-nio-8888-exec-5:133696 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:"1234567890"     第2个参数:"12345678"     
+2022-03-21 10:47:12  [ http-nio-8888-exec-5:133697 ] - [ INFO ]  返回信息0
+2022-03-21 10:47:44  [ http-nio-8888-exec-3:165471 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 10:47:44  [ http-nio-8888-exec-3:165483 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:"12345678901"     第2个参数:"12345678"     
+2022-03-21 10:47:44  [ http-nio-8888-exec-3:165483 ] - [ INFO ]  返回信息1
+2022-03-21 10:47:44  [ http-nio-8888-exec-6:165489 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.main参数长度：0
+2022-03-21 10:47:44  [ http-nio-8888-exec-6:165489 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.main参数信息：null
+2022-03-21 10:47:44  [ http-nio-8888-exec-6:165489 ] - [ INFO ]  返回信息"/admin/adminmain"
+2022-03-21 11:03:30  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.main参数长度：0
+2022-03-21 11:03:30  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.main参数信息：null
+2022-03-21 11:03:30  [ http-nio-8888-exec-1:24 ] - [ INFO ]  返回信息"/admin/adminmain"
+2022-03-21 11:03:38  [ http-nio-8888-exec-9:7424 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 11:03:38  [ http-nio-8888-exec-9:7586 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:"12345678901"     第2个参数:"12345678"     
+2022-03-21 11:03:38  [ http-nio-8888-exec-9:7586 ] - [ INFO ]  返回信息1
+2022-03-21 11:03:38  [ http-nio-8888-exec-10:7601 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.main参数长度：0
+2022-03-21 11:03:38  [ http-nio-8888-exec-10:7601 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.main参数信息：null
+2022-03-21 11:03:38  [ http-nio-8888-exec-10:7601 ] - [ INFO ]  返回信息"/admin/adminmain"
+2022-03-21 11:16:46  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 11:16:46  [ http-nio-8888-exec-1:10 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 11:16:46  [ http-nio-8888-exec-1:32 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 11:16:46  [ http-nio-8888-exec-7:228 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 11:16:46  [ http-nio-8888-exec-7:346 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 11:16:46  [ http-nio-8888-exec-7:346 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647832606751,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 11:16:46  [ http-nio-8888-exec-7:346 ] - [ INFO ]  返回信息null
+2022-03-21 11:19:19  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 11:19:19  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 11:19:19  [ http-nio-8888-exec-1:30 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 11:19:19  [ http-nio-8888-exec-7:196 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 11:19:19  [ http-nio-8888-exec-7:314 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 11:19:19  [ http-nio-8888-exec-7:314 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647832759864,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 11:19:19  [ http-nio-8888-exec-7:315 ] - [ INFO ]  返回信息null
+2022-03-21 11:21:50  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 11:21:50  [ http-nio-8888-exec-1:10 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 11:21:50  [ http-nio-8888-exec-1:36 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 11:21:50  [ http-nio-8888-exec-8:228 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 11:21:50  [ http-nio-8888-exec-8:360 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 11:21:50  [ http-nio-8888-exec-8:360 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647832910445,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 11:21:50  [ http-nio-8888-exec-8:360 ] - [ INFO ]  返回信息null
+2022-03-21 11:31:44  [ http-nio-8888-exec-10:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 11:31:44  [ http-nio-8888-exec-10:4 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 11:31:44  [ http-nio-8888-exec-10:35 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 11:31:44  [ http-nio-8888-exec-5:206 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 11:31:45  [ http-nio-8888-exec-5:330 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 11:31:45  [ http-nio-8888-exec-5:330 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647833505042,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 11:31:45  [ http-nio-8888-exec-5:330 ] - [ INFO ]  返回信息null
+2022-03-21 11:32:54  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 11:32:54  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 11:32:54  [ http-nio-8888-exec-1:27 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 11:32:55  [ http-nio-8888-exec-6:206 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 11:32:55  [ http-nio-8888-exec-6:335 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 11:32:55  [ http-nio-8888-exec-6:335 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647833575040,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 11:32:55  [ http-nio-8888-exec-6:335 ] - [ INFO ]  返回信息null
+2022-03-21 11:34:24  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 11:34:24  [ http-nio-8888-exec-1:3 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 11:34:24  [ http-nio-8888-exec-1:31 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 11:34:24  [ http-nio-8888-exec-7:204 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 11:34:24  [ http-nio-8888-exec-7:332 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 11:34:24  [ http-nio-8888-exec-7:332 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647829888290,"id":"750B2889EFF086AAD97441B836B81D54","lastAccessedTime":1647833664854,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 11:34:24  [ http-nio-8888-exec-7:332 ] - [ INFO ]  返回信息null
+2022-03-21 11:34:37  [ http-nio-8888-exec-10:13069 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 11:34:37  [ http-nio-8888-exec-10:13232 ] - [ INFO ]  
+### Error updating database.  Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+### The error may exist in com/zxh/mapper/AdminMapper.java (best guess)
+### The error may involve com.zxh.mapper.AdminMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO admin  ( admin_name, admin_password )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+; Field 'admin_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'admin_id' doesn't have a default value
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+### The error may exist in com/zxh/mapper/AdminMapper.java (best guess)
+### The error may involve com.zxh.mapper.AdminMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO admin  ( admin_name, admin_password )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+; Field 'admin_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'admin_id' doesn't have a default value
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:251)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy71.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy74.insert(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.save(IService.java:63)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zxh.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$20dd79e.save(<generated>)
+	at com.zxh.service.business.AdminBusiness.register(AdminBusiness.java:27)
+	at com.zxh.controller.AdminController.register(AdminController.java:61)
+	at com.zxh.controller.AdminController$$FastClassBySpringCGLIB$$e6115f6a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at com.zxh.utils.Logger.aroundprintLg(Logger.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.zxh.controller.AdminController$$EnhancerBySpringCGLIB$$9f1efdcb.register(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy109.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy107.update(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:83)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy106.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 84 more
+2022-03-21 11:34:37  [ http-nio-8888-exec-10:13233 ] - [ INFO ]  方法com.zxh.controller.AdminController.register出现异常
+2022-03-21 14:04:33  [ http-nio-8888-exec-5:9008630 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:04:33  [ http-nio-8888-exec-5:9008636 ] - [ INFO ]  
+### Error updating database.  Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+### The error may exist in com/zxh/mapper/AdminMapper.java (best guess)
+### The error may involve com.zxh.mapper.AdminMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO admin  ( admin_name, admin_password )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+; Field 'admin_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'admin_id' doesn't have a default value
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+### The error may exist in com/zxh/mapper/AdminMapper.java (best guess)
+### The error may involve com.zxh.mapper.AdminMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO admin  ( admin_name, admin_password )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+; Field 'admin_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'admin_id' doesn't have a default value
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:251)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy71.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy74.insert(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.save(IService.java:63)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zxh.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$20dd79e.save(<generated>)
+	at com.zxh.service.business.AdminBusiness.register(AdminBusiness.java:27)
+	at com.zxh.controller.AdminController.register(AdminController.java:61)
+	at com.zxh.controller.AdminController$$FastClassBySpringCGLIB$$e6115f6a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at com.zxh.utils.Logger.aroundprintLg(Logger.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.zxh.controller.AdminController$$EnhancerBySpringCGLIB$$9f1efdcb.register(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Field 'admin_id' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy109.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy107.update(Unknown Source)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:83)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy106.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 84 more
+2022-03-21 14:04:33  [ http-nio-8888-exec-5:9008637 ] - [ INFO ]  方法com.zxh.controller.AdminController.register出现异常
+2022-03-21 14:06:06  [ http-nio-8888-exec-4:9101925 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:06:06  [ http-nio-8888-exec-4:9101946 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372024"     第2个参数:"12345678"     
+2022-03-21 14:06:06  [ http-nio-8888-exec-4:9101946 ] - [ INFO ]  返回信息1
+2022-03-21 14:10:11  [ http-nio-8888-exec-2:9347330 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 14:10:11  [ http-nio-8888-exec-2:9347330 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 14:10:11  [ http-nio-8888-exec-2:9347331 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 14:10:11  [ http-nio-8888-exec-10:9347366 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 14:10:11  [ http-nio-8888-exec-10:9347372 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 14:10:11  [ http-nio-8888-exec-10:9347372 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647843011965,"id":"A1A4C525368B7A6C09BAFF66C6221FAD","lastAccessedTime":1647843011965,"maxInactiveInterval":1800,"new":true,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 14:10:11  [ http-nio-8888-exec-10:9347372 ] - [ INFO ]  返回信息null
+2022-03-21 14:14:53  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.adminlogin参数长度：0
+2022-03-21 14:14:53  [ http-nio-8888-exec-1:4 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.adminlogin参数信息：null
+2022-03-21 14:14:53  [ http-nio-8888-exec-1:33 ] - [ INFO ]  返回信息"adminlogin"
+2022-03-21 14:14:54  [ http-nio-8888-exec-7:214 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.UserController.getImage参数长度：2
+2022-03-21 14:14:54  [ http-nio-8888-exec-7:327 ] - [ ERROR ]  参数转换出现异常
+2022-03-21 14:14:54  [ http-nio-8888-exec-7:328 ] - [ INFO ]  用户：调用方法：com.zxh.controller.UserController.getImage参数信息：null第1个参数:{"attributeNames":["code"],"creationTime":1647843011965,"id":"A1A4C525368B7A6C09BAFF66C6221FAD","lastAccessedTime":1647843294143,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"requestContextFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter","initParameters":{},"name":"requestContextFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]},"formContentFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedFormContentFilter","initParameters":{},"name":"formContentFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.58","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":["code"]}     
+2022-03-21 14:14:54  [ http-nio-8888-exec-7:328 ] - [ INFO ]  返回信息null
+2022-03-21 14:15:18  [ http-nio-8888-exec-10:25065 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:15:19  [ http-nio-8888-exec-10:25189 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372024"     第2个参数:"12345678"     
+2022-03-21 14:15:19  [ http-nio-8888-exec-10:25189 ] - [ INFO ]  返回信息1
+2022-03-21 14:23:56  [ http-nio-8888-exec-1:0 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:23:56  [ http-nio-8888-exec-1:156 ] - [ INFO ]  nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy71.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:90)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy74.selectOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.getOne(ServiceImpl.java:201)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:229)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zxh.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$e6f8406.getOne(<generated>)
+	at com.zxh.service.business.AdminBusiness.register(AdminBusiness.java:24)
+	at com.zxh.controller.AdminController.register(AdminController.java:61)
+	at com.zxh.controller.AdminController$$FastClassBySpringCGLIB$$e6115f6a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at com.zxh.utils.Logger.aroundprintLg(Logger.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.zxh.controller.AdminController$$EnhancerBySpringCGLIB$$a155de06.register(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 85 more
+2022-03-21 14:23:56  [ http-nio-8888-exec-1:158 ] - [ INFO ]  方法com.zxh.controller.AdminController.register出现异常
+2022-03-21 14:24:08  [ http-nio-8888-exec-2:12180 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:24:08  [ http-nio-8888-exec-2:12185 ] - [ INFO ]  nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy71.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:90)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy74.selectOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.getOne(ServiceImpl.java:201)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:229)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zxh.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$e6f8406.getOne(<generated>)
+	at com.zxh.service.business.AdminBusiness.register(AdminBusiness.java:24)
+	at com.zxh.controller.AdminController.register(AdminController.java:61)
+	at com.zxh.controller.AdminController$$FastClassBySpringCGLIB$$e6115f6a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at com.zxh.utils.Logger.aroundprintLg(Logger.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.zxh.controller.AdminController$$EnhancerBySpringCGLIB$$a155de06.register(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 85 more
+2022-03-21 14:24:08  [ http-nio-8888-exec-2:12186 ] - [ INFO ]  方法com.zxh.controller.AdminController.register出现异常
+2022-03-21 14:24:12  [ http-nio-8888-exec-3:16094 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:24:12  [ http-nio-8888-exec-3:16097 ] - [ INFO ]  nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy71.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:90)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy74.selectOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.getOne(ServiceImpl.java:201)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:229)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zxh.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$e6f8406.getOne(<generated>)
+	at com.zxh.service.business.AdminBusiness.register(AdminBusiness.java:24)
+	at com.zxh.controller.AdminController.register(AdminController.java:61)
+	at com.zxh.controller.AdminController$$FastClassBySpringCGLIB$$e6115f6a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at com.zxh.utils.Logger.aroundprintLg(Logger.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.zxh.controller.AdminController$$EnhancerBySpringCGLIB$$a155de06.register(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 85 more
+2022-03-21 14:24:12  [ http-nio-8888-exec-3:16099 ] - [ INFO ]  方法com.zxh.controller.AdminController.register出现异常
+2022-03-21 14:24:41  [ http-nio-8888-exec-4:44901 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:24:41  [ http-nio-8888-exec-4:44929 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372024"     第2个参数:"12345678"     
+2022-03-21 14:24:41  [ http-nio-8888-exec-4:44930 ] - [ INFO ]  返回信息2
+2022-03-21 14:24:54  [ http-nio-8888-exec-5:58205 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:24:54  [ http-nio-8888-exec-5:58214 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372024"     第2个参数:"12345678"     
+2022-03-21 14:24:54  [ http-nio-8888-exec-5:58215 ] - [ INFO ]  返回信息2
+2022-03-21 14:27:28  [ http-nio-8888-exec-7:211908 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:27:28  [ http-nio-8888-exec-7:211920 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372024"     第2个参数:"12345678"     
+2022-03-21 14:27:28  [ http-nio-8888-exec-7:211920 ] - [ INFO ]  返回信息2
+2022-03-21 14:28:07  [ http-nio-8888-exec-9:250598 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:28:07  [ http-nio-8888-exec-9:250605 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372024"     第2个参数:"1232131231"     
+2022-03-21 14:28:07  [ http-nio-8888-exec-9:250605 ] - [ INFO ]  返回信息2
+2022-03-21 14:29:26  [ http-nio-8888-exec-8:330325 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:29:26  [ http-nio-8888-exec-8:330343 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372025"     第2个参数:"12345678"     
+2022-03-21 14:29:26  [ http-nio-8888-exec-8:330344 ] - [ INFO ]  返回信息1
+2022-03-21 14:29:44  [ http-nio-8888-exec-1:347452 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.checkadmin参数长度：2
+2022-03-21 14:29:44  [ http-nio-8888-exec-1:347462 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.checkadmin参数信息：null第1个参数:"17689372025"     第2个参数:"12345678"     
+2022-03-21 14:29:44  [ http-nio-8888-exec-1:347462 ] - [ INFO ]  返回信息1
+2022-03-21 14:29:44  [ http-nio-8888-exec-2:347482 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.main参数长度：0
+2022-03-21 14:29:44  [ http-nio-8888-exec-2:347482 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.main参数信息：null
+2022-03-21 14:29:44  [ http-nio-8888-exec-2:347482 ] - [ INFO ]  返回信息"/admin/adminmain"
+2022-03-21 14:31:52  [ http-nio-8888-exec-9:475389 ] - [ INFO ]  用户：正在调用方法：com.zxh.controller.AdminController.register参数长度：2
+2022-03-21 14:32:12  [ http-nio-8888-exec-9:496147 ] - [ INFO ]  用户：调用方法：com.zxh.controller.AdminController.register参数信息：null第1个参数:"17689372025"     第2个参数:"12345678"     
+2022-03-21 14:32:13  [ http-nio-8888-exec-9:496665 ] - [ INFO ]  返回信息2

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" th:href="@{/dist/css/zui.min.css}">
+    <link rel="stylesheet" th:href="@{/dist/css/bootstrap.min.css}">
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script th:src="@{/dist/lib/jquery/jquery.js}"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script th:src="@{/dist/js/zui.min.js}"></script>
+<body>
+<div class="container">
+    <div class="row" style="border-bottom:2px solid #DDDDDD">
+        <div class="col-xs-2 col-xs-offset-1" style="height: 100px;background-image: url(/img/后台图徽.png);background-size:100% 100%;"></div>
+        <div class="col-xs-4 col-xs-offset-1">
+            <div class="input-group" style="margin-top: 30px">
+                <div class="input-control search-box  has-icon-left has-icon-right search-example" id="searchboxExample">
+                    <input id="goodsname" type="search" class="form-control search-input" placeholder="搜索">
+                    <label for="goodsname" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+            <div class="row">
+                <div class="col-xs-6" style="margin-top: 10px">
+                    <span hidden id="userid" style="font-size: 18px;font-weight: 800" >[[${session.loginuser2.userId}]]</span>
+                    用户：<span style="font-size: 18px;font-weight: 800" >[[${session.loginuser2.userName}]]</span>
+                </div>
+                <div class="col-xs-6" style="margin-top: 10px"><a style="font-size: 18px;font-weight: 800">购物车</a></div>
+                <div class="col-xs-6" style="margin-top: 10px"><a style="font-size: 18px;font-weight: 800">订单管理</a></div>
+            </div>
+        </div>
+    </div>
+    <div style=""> <a class="btn btn-primary" style="width: 200px;background-color: #d4d4d4" th:href="@{/user/main.html}">返回商城</a></div>
+    <div style="margin-top: 20px;margin-bottom: 100px">
+        <span hidden id="goods_id" style="width: 0px;height: 0px;font-size: 1.5em"><b>[[${session.goods.goodsId}]]</b></span>
+        <div class="pull-left">
+            <img id="petimg" th:src='${session.goods.goodsPic}' style="width: 260px;height: 340px">
+        </div>
+        <div style="margin-left: 320px" width="500px">
+            <div>
+                <span id="goods_introduce" style="width: 500px;height: 50px;font-size: 1.5em"><b>[[${session.goods.goodsIntroduce}]]</b></span>
+            </div>
+            <div style="font-size: 1.5em;margin-top: 20px">
+                名称：<span id="goods_name" style="font-size: 1.5em ;margin-top: 20px">[[${session.goods.goodsName}]]</span>
+            </div>
+            <div style="font-size: 1.5em;margin-top: 20px">
+                单价：<span id="goods_price" style="color: red;font-size: 2em ;margin-top: 20px">[[${session.goods.goodsPrice}]]</span>元
+            </div>
+            <div style="font-size: 1.5em;margin-top: 20px">
+                库存：<span id="goods_stock" style="color: red;font-size: 2em ;margin-top: 20px">[[${session.goods.goodsStock}]]</span>件
+            </div>
+            <div style="font-size: 1.5em;margin-top: 20px">
+                销量：<span id="goods_number" style="color: red;font-size: 2em ;margin-top: 20px">[[${session.goods.goodsNumber}]]</span>件
+            </div>
+            <div style="font-size: 1.5em;margin-top: 20px" >
+                <span>购买数量：<input id="goods_num" style="width: 100px" type="text" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" value="1"></span><br>
+                <a style="margin-left: 0px;margin-top: 20px" class="btn btn-primary btn-lg" type="button" onclick="buyshopping2()">加入购物车</a>
+                <a style="margin-left: 50px;margin-top: 20px" class="btn btn-primary btn-lg" type="button" onclick="serviceaddone()">立即购买</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/js/common.js}"></script>
+</html>
+<script>
+    function buyshopping2() {
+
+        $.ajax({
+            type: "get",
+            url: "/order/addone",
+            data: {
+                goodsId:$('#goods_id').text(),
+                userId: $("#userid").text(),
+                price: $("#goods_price").text(),
+                number: $("#goods_num").val(),
+            },
+            success: function (data) {
+                if(data==1){
+                    success("成功加入购物车")
+                }else {
+                    fail("加入购物车失败")
+                }
+            }
+        })
+    }
+    function serviceaddone(){
+        $.ajax({
+            type: "get",
+            datatype: "json",
+            url: "/service/addone",
+            data: {
+                goodsid: $('#goods_id').text(),
+                price: $("#goods_price").text(),
+                number: $("#goods_num").val()
+            },
+            success: function (data) {
+                if(data==0){
+                    fail("订购失败")
+                }else if(data==1){
+                    success("订购成功")
+                }else if(data==2){
+                    fail("余额不足")
+                }else if(data==3){
+                    fail("库存不足")
+                }
+                setTimeout(function(){
+                    window.location.href="/goods/details?goodsid="+$('#goods_id').text()+"";
+                }, 1000);
+
+            }
+        })
+    }
+</script>

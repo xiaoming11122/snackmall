@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>后台管理</title>
+    <link rel="stylesheet" th:href="@{/dist/css/zui.min.css}">
+    <link rel="stylesheet" th:href="@{/dist/css/bootstrap.min.css}">
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script th:src="@{/dist/lib/jquery/jquery.js}"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script th:src="@{/dist/js/zui.min.js}"></script>
+</head>
+<style>
+    td{
+        text-align:center;
+        vertical-align:middle;
+    }
+</style>
+<body>
+<div class="container-fixed-md">
+    <div class="row" style="border-bottom:2px solid #DDDDDD">
+        <div class="col-xs-2 col-xs-offset-1" style="height: 100px;background-image: url(/img/后台图徽.png);background-size:100% 100%;"></div>
+        <div class="col-xs-5 col-xs-offset-4" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-xs-6"><i class="icon icon-user"></i>你好：<span>[[${session.loginuser.adminName}]]</span></div>
+                <div class="col-xs-3"><i class="icon icon-signout"></i><a th:href="@{/admin/adminlogin}">安全退出</a></div>
+                <div class="col-xs-3"><a>修改密码</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3" style="height: 500px;;">
+            <nav class="menu" data-ride="menu" style="width: 200px;">
+                <ul id="treeMenu" class="tree tree-menu" data-ride="tree" style="border:none ;margin-left: -15px;background-color: #87CEFA ;border-radius: 0px 0px 0px 0px ;height: 500px;">
+                    <li><a href="#"><i class="icon icon-th"></i>零食管理</a>
+                        <ul>
+                            <li class="active" id="goodsmanager"><a th:href="@{/admin/adminmain.html}">管理</a></li>
+                            <li id="shelvesgoods" ><a onclick="shelvevontent()">上架</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon icon-th"></i>推荐管理</a>
+                        <ul>
+                            <li><a onclick="recommendmanagerinitial()">管理</a></li>
+                            <li ><a onclick="recommendnewpanel()">新增</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick="initialstudentmanager()"><i class="icon icon-th"></i>学生管理</a>
+                    </li>
+                    <li><a href="#"><i class="icon icon-th"></i>销量统计</a></li>
+                    <li><a href="#"><i class="icon icon-th"></i>订单管理</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-9" style="height: 300px;">
+            <div class="row">
+                <div class="col-xs-12" id="operationcontent">
+                    <div class="input-group" id="researchpanel">
+                        <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="编号" id="id">
+                        <select class="form-control" name="status" id="state" style="width: 25%;margin: 15px 10px">
+                            <option value="">请选择状态</option>
+                            <option value="1">上架</option>
+                            <option value="0">待上架</option>
+                        </select>
+
+                        <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="菜名" id="name">
+                        <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick="research()">搜索</button>
+                </span>
+                    </div>
+                    <div class="input-group" id="researchpane2">
+                    <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="推荐商品编号" id="goodsid2">
+                    <select class="form-control" name="status2" id="recommendleve2" style="width: 25%;margin: 15px 10px">
+                        <option value="">推荐等级</option>
+                        <option value="1">一星</option>
+                        <option value="2">二星</option>
+                        <option value="3">三星</option>
+                    </select>
+                    <select class="form-control" name="status2" id="recommendstatus2" style="width: 25%;margin: 15px 10px">
+                        <option value="">是否轮播展示</option>
+                        <option value="0">否</option>
+                        <option value="1">是</option>
+                    </select>
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick="researhrecommend()">搜索</button>
+                </span>
+                </div>
+                    <table class="table" style="color: blue;" id="goodsinfo">
+                    </table>
+                </div>
+                <ul style="margin-left: 15px" id="myPage" data-ride="pager" class="pager" data-page="1" data-rec-per-page="5" data-rec-total="14"
+                    data-elements="prev,nav,next,first,last,goto">
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="mySmModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mySmModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">修改零食内容</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsid" type="text" class="form-control" placeholder="" readonly>
+                        <label for="goodsid" class="input-control-label-left text-right">编号:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsname" type="text" class="form-control" placeholder="">
+                        <label for="goodsname" class="input-control-label-left text-right">名称:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsprice" type="text" class="form-control" placeholder="">
+                        <label for="goodsprice" class="input-control-label-left text-right">价格:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsstock" type="text" class="form-control" placeholder="">
+                        <label for="goodsstock" class="input-control-label-left text-right">库存:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <select class="form-control" name="goodsstatus" id="goodsstatus">
+                            <option value="1">上架</option>
+                            <option value="0">下架</option>
+                        </select>
+                        <label for="goodsstatus" class="input-control-label-left text-right">状态:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsimgpath" type="file" class="form-control" placeholder="" >
+                        <label for="goodsimgpath" class="input-control-label-left text-right">图片:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsintroduce" type="text" class="form-control" placeholder="">
+                        <label for="goodsintroduce" class="input-control-label-left text-right">介绍:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px" id="goodspriamrycateselect">
+                        <select class="form-control" name="goodspriamrycate" id="goodsprimarycate">
+                        </select>
+                        <label for="goodsprimarycate" class="input-control-label-left text-right">一级:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px" id="goodssecondarycateselect">
+                        <select class="form-control" name="goodssecondarycate" id="goodssecondarycate">
+                        </select>
+                        <label for="goodssecondarycate" class="input-control-label-left text-right">二级:</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="updateone()">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mySmModal3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">修改推荐零食内容</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="recommendid" type="text" class="form-control" placeholder="" readonly>
+                        <label for="recommendid" class="input-control-label-left text-right">编号:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="goodsid3" type="text" class="form-control" placeholder="">
+                        <label for="goodsid3" class="input-control-label-left text-right">商品编号:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="recommendimg" type="file" class="form-control" placeholder="" >
+                        <label for="recommendimg" class="input-control-label-left text-right">图片:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <select class="form-control" name="recommendleve" id="recommendleve">
+                            <option value="1">一星</option>
+                            <option value="2">二星</option>
+                            <option value="3">三星</option>
+                        </select>
+                        <label for="goodsstatus" class="input-control-label-left text-right">等级:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <select class="form-control" name="recommendstatus" id="recommendstatus">
+                            <option value="0">否</option>
+                            <option value="1">是</option>
+                        </select>
+                        <label for="recommendstatus" class="input-control-label-left text-right">状态:</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="updaterecommendone()">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script th:src="@{/js/adminmain.js}"></script>
+<script th:src="@{/js/common.js}"></script>
+
+</html>
+<script>
+    var deletepenal=$(".modal-content")[0];
+    var operationcontent=document.getElementById("operationcontent");
+    var goodsinfo=document.getElementById("goodsinfo");
+    var goodspriamrycateselect=document.getElementById("goodspriamrycateselect");
+    var goodssecondarycateselect=document.getElementById("goodssecondarycateselect");
+    var allpage=0;
+    var pagesize=5;
+    var start=1;
+    var pagesstatus=1;
+    var count=0;
+    $(function () {
+        $('#myPage').on('onPageChange', function(e, state, oldState) {
+            if (state.page !== oldState.page) {
+                start=state.page;
+                if(0<start && start<=allpage){
+                    if (pagesstatus==1){
+                        initpage();
+                    }else if(pagesstatus==2){
+                        recommendmanagerinitial();
+                    }
+                }
+            }
+        });
+    })
+    function researhrecommend() {
+        start=1
+        recommendmanagerinitial();
+    }
+
+    function recommendmanagerinitial(){
+        pagesstatus=2
+        $("#researchpanel").hide()
+        $('#researchpane2').show()
+        $("#myPage").show()
+        var goodsid=document.getElementById("goodsid2");
+        var recommendstatus=document.getElementById("recommendstatus2");
+        var recommendleve=document.getElementById("recommendleve2");
+        $.ajax({
+            type: "get",
+            url: "/recommend/page",
+            data: {
+                pagesize: pagesize,
+                start: start,
+                goodsid: $('#goodsid2').val(),
+                recommendstatus: $("#recommendstatus2").val(),
+                recommendleve: $("#recommendleve2").val()
+            },
+            datatype: "json",
+            success: function (data) {
+                // console.log(data)
+                count=data.total;
+                allpage=data.pages;
+                var myPager = $('#myPage').data('zui.pager');
+                myPager.set({
+                    page:start,
+                    recTotal: count,
+                    recPerpage:pagesize,
+                    lang:"zh_cn"
+                });
+                var str="";
+                str+="<thead class=\"success\" >\n" +
+                    "                    <tr>\n" +
+                    "                        <td>编号</td>\n" +
+                    "                        <td>商品编号</td>\n" +
+                    "                        <td>轮播图片</td>\n" +
+                    "                        <td>推荐等级</td>\n" +
+                    "                        <td>展示状态</td>\n" +
+                    "                        <td>操作</td>\n" +
+                    "                    </tr>\n" +
+                    "                </thead>\n" ;
+                for(var i=0;i<data.records.length;i++){
+                    var recommend=data.records[i];
+
+                    var rid=recommend.recommendId;
+                    str+="<tr class='success'>";
+                    str+="<td width='50px'>";
+                    str+=rid;
+                    str+="</td>";
+                    str+="<td width='80px'>";
+                    str+=recommend.goodsId;
+                    str+="</td>";
+                    str+="<td>";
+                    str+="<img  width='80px' height='60px' src='"+recommend.recommendPic+"'>";
+                    str+="</td>";
+                    str+="<td width='80px'>";
+                    if(recommend.recommendLeve==1){
+                        str+="一星"
+                    }else if(recommend.recommendLeve==2){
+                        str+="二星"
+                    }else if(recommend.recommendLeve==3){
+                        str+="三星"
+                    }
+                    str+="</td>"
+                    str+="<td width='80px'>";
+                    if(recommend.recommendStatus==1){
+                        str+="是"
+                    }else {
+                        str += "否"
+                    }
+                    str+="</td>"
+                    str+="<td>"
+                    str+="<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#mySmModal3\" onclick=\"showrecommendinfo('"+rid+"','"+recommend.goodsId+"','"+recommend.recommendLeve+"','"+recommend.recommendStatus+"')\">修改</button>"
+                    str+="<button type=\"button\" class=\"btn btn-danger\" data-toggle=\"modal\" data-target=\"#mySmModal\" onclick=\"showrecommendone('"+rid+"')\">删除</button>";
+                    str+="</td>";
+                    str+="</tr>";
+                }
+
+                goodsinfo.innerHTML=str;
+            }
+        });
+    }
+    function addonerecommend(){
+        var formData = new FormData();
+        var files = document.getElementById("recommendimg").files;
+        var imgpath = files[0];
+        formData.append("rimgpath", imgpath);
+        formData.append("goodsId",$('#goodsid').val())
+        formData.append("recommendLeve", $('#recommendleve').val())
+        formData.append("recommendStatus", $('#recommendtatus').val())
+        $.ajax({
+            type: "post",
+            url: "/recommend/addone",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if (data==1){
+                    success("成功加入推荐")
+                }else if(data==0) {
+                    fail("推荐零食失败")
+                }else if (data==2){
+                    fail("商品已被推荐")
+                }else if(data==3){
+                    fail("推荐失败，商品不存在")
+                }
+
+            }
+        });
+    }
+    function updaterecommendone(){
+        $('#mySmModal3').modal('hide', 'fit');
+        var formData = new FormData();
+        var files = document.getElementById("recommendimg").files;
+        var imgpath = files[0];
+        formData.append("image", imgpath);
+        formData.append("recommendId", $('#recommendid').val())
+        formData.append("goodsId", $('#goodsid3').val())
+        formData.append("recommendLeve", $('#recommendleve').val())
+        formData.append("recommendStatus",$('#recommendstatus').val())
+        $.ajax({
+            type: "post",
+            url: "/recommend/updateone",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if(data==1){
+                    success("修改成功")
+                }else if (data==0){
+                    fail("修改失败")
+                }else if(data==3){
+                    fail("修改失败，商品不存在")
+                }
+                recommendmanagerinitial();
+            }
+        });
+    }
+    function updateone() {
+        $('#mySmModal2').modal('hide', 'fit');
+        var formData = new FormData();
+        var files = document.getElementById("goodsimgpath").files;
+        var imgpath = files[0];
+        formData.append("image", imgpath);
+        formData.append("goodsId", $('#goodsid').val())
+        formData.append("goodsName", $('#goodsname').val())
+        formData.append("goodsPrice", $('#goodsprice').val())
+        formData.append("goodsStock",$('#goodsstock').val())
+        formData.append("goodsStatus", $('#goodsstatus').val())
+        formData.append("goodsIntroduce", $('#goodsintroduce').val())
+        formData.append("scId",$('#goodssecondarycate').val())
+        $.ajax({
+            type: "post",
+            url: "/goods/updateone",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if(data==1){
+                    success("修改成功")
+                }else {
+                    fail("修改失败")
+                }
+                initpage();
+            }
+        });
+    }
+    function showrecommendinfo(rid,goodsid,leve,status){
+        $('#recommendid').val(rid);
+        $('#goodsid3').val(goodsid)
+        $('#recommendleve').val(leve)
+        $('#recommendstatus').val(status)
+    }
+    function showinfo(id,name,introduce,scid,price,stock,status,pcid){
+        $.ajax({
+            type:"get",
+            datatype:"json",
+            url:"/primarycate/getMap",
+            data:{
+                pcid:pcid
+            },
+            success:function (data) {
+                // console.log(data)
+                var primarycateList=data.primarycateList
+                var secondarycateList=data.secondarycateList
+                str=""
+
+                str+="<select class=\"form-control\" name=\"goodspriamrycate\" id=\"goodsprimarycate\" onchange=\"primarycateChange(this.options[this.options.selectedIndex].value,'goodssecondarycate')\">\n" +
+                    "                        <option value=\"100\">一级类别</option>\n";
+                str2=""
+                str2+="<select class=\"form-control\" name=\"goodssecondarycate\" id=\"goodssecondarycate\">\n"+
+                    "                        <option value=\"100\">二级类别</option>\n";
+                for(var i=0;i<primarycateList.length;i++){
+                    if (primarycateList[i].pcId==pcid){
+                        str+="<option value=\""+primarycateList[i].pcId+" \" selected = \"selected\">"+primarycateList[i].pcName+"</option>"
+                    }else {
+                        str+= "<option value=\""+primarycateList[i].pcId+" \">"+primarycateList[i].pcName+"</option>" ;
+                    }
+                }
+                str+="                    </select>"
+                str+="<label for=\"goodspriamrycate\" class=\"input-control-label-left text-right\">一级:</label>"
+
+                for(var k=0;k<secondarycateList.length;k++){
+                    if(secondarycateList[k].scId==scid){
+                        str2+= "<option value=\""+secondarycateList[k].scId+" \" selected = \"selected\">"+secondarycateList[k].scName+"</option>" ;
+                    }else{
+                        str2+= "<option value=\""+secondarycateList[k].scId+" \">"+secondarycateList[k].scName+"</option>" ;
+                    }
+                }
+                str2+="                    </select>"
+                str2+="<label for=\"goodssecondarycate\" class=\"input-control-label-left text-right\">二级:</label>"
+                $('#goodsid').val(id);
+                $('#goodsname').val(name)
+                $('#goodsintroduce').val(introduce)
+                $('#goodsprice').val(price)
+                $('#goodsstock').val(stock)
+                $('#goodsstatus').val(status)
+                goodssecondarycateselect.innerHTML=str2
+                goodspriamrycateselect.innerHTML=str
+            }
+        })
+        $("#goodsprimarycate").val(pcid)
+    }
+    function showrecommendone(id) {
+        deletepenal.innerHTML="<br><span style='margin: 10px 75px'>确定要删除推荐商品：&nbsp&nbsp<b>"+id+"</b>"
+            +"<button class=\"btn btn-primary\" type=\"button\" onclick='deleterecommendone("+id+")' style='margin: 10px 120px" +
+            "'>确定</button>";
+    }
+    function showone(id) {
+        deletepenal.innerHTML="<br><span style='margin: 10px 75px'>确定要删除商品：&nbsp&nbsp<b>"+id+"</b>"
+            +"<button class=\"btn btn-primary\" type=\"button\" onclick='deleteone("+id+")' style='margin: 10px 120px" +
+            "'>确定</button>";
+    }
+    function deleterecommendone(id) {
+        $('#mySmModal').modal('hide', 'fit')
+        $.ajax({
+            type:"GET",
+            url:"/recommend/deleteone",
+            data:{
+                recommendid:id
+            },
+            success:function (data) {
+                if(data==1){
+                    success("删除商品成功： "+id);
+                }else {
+                    fail("删除商品失败： "+id)
+                }
+                recommendmanagerinitial();
+            }
+        })
+    }
+    function deleteone(id) {
+        $('#mySmModal').modal('hide', 'fit')
+        $.ajax({
+            type:"GET",
+            url:"/goods/deleteone",
+            data:{
+                goodsId:id
+            },
+            success:function (data) {
+                if(data==1){
+                    success("删除商品成功： "+id);
+                }else {
+                    fail("删除商品失败： "+id)
+                }
+                initpage();
+            }
+        })
+    }
+    function research() {
+        start=1;
+        initpage();
+    }
+    function recommendnewpanel() {
+        $('#myPage').hide()
+        $("#researchpanel").hide()
+        $("#researchpane2").hide()
+
+        str=""
+        str+="<div class=\"input-group\" style='margin-top: 15px'>\n" +
+            "                    <span class=\"input-group-addon\">@</span>\n" +
+            "                    <input type=\"text\" class=\"form-control\" placeholder=\"推荐商品id\" id=\"goodsid\">\n" +
+            "                </div>"
+        str+="<div class=\"input-group\"  style='margin-top: 15px'> \n" +
+            "                    <span class=\"input-group-addon\"><i class=\"icon icon-file-image\"></i></span>\n" +
+            "                    <input type=\"file\" class=\"form-control\"  id=\"recommendimg\" >\n" +
+            "                </div>";
+        str+="<div class=\"input-group\"  style='margin-top: 15px'>\n" +
+            "                    <span class=\"input-group-addon\"><i class=\"icon icon-unlock-alt\"></i></span>\n" +
+            "                    <select class=\"form-control\" name=\"recommendleve\" id=\"recommendleve\">\n" +
+            "                        <option value=\"1\">推荐等级</option>\n" +
+            "                        <option value=\"1\">一星</option>\n" +
+            "                        <option value=\"2\">二星</option>\n" +
+            "                        <option value=\"2\">三星</option>\n" +
+            "                    </select>\n" +
+            "                </div>";
+        str+="<div class=\"input-group\"  style='margin-top: 15px'>\n" +
+            "                    <span class=\"input-group-addon\"><i class=\"icon icon-unlock-alt\"></i></span>\n" +
+            "                    <select class=\"form-control\" name=\"recommendstatus\" id=\"recommendtatus\">\n" +
+            "                        <option value=\"0\">是否上前台轮播</option>\n" +
+            "                        <option value=\"0\">否</option>\n" +
+            "                        <option value=\"1\">是</option>\n" +
+            "                    </select>\n" +
+            "                </div>";
+        str+="<button class=\"btn btn-primary\" type=\"submit\" style=\"margin: 15px 300px\" onclick=\"addonerecommend()\">确定</button>"
+        goodsinfo.innerHTML=str
+
+    }
+    function shelvevontent(){
+        $('#myPage').hide()
+        $("#researchpanel").hide()
+        $('#researchpane2').hide()
+        $.ajax({
+                type:"get",
+                datatype:"json",
+                url:"/primarycate/getAll",
+                data:{
+                },
+            success:function (primarycates) {
+                var str="";
+                str+="<div class=\"input-group\" style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\">@</span>\n" +
+                    "                    <input type=\"text\" class=\"form-control\" placeholder=\"零食名称\" id=\"name\">\n" +
+                    "                </div>"
+                str+="<div class=\"input-group\"  style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\"><i class=\"icon icon-dollar\"></i></span>\n" +
+                    "                    <input type=\"text\" class=\"form-control\" placeholder=\"价格\" id=\"price\">\n" +
+                    "                </div>"
+                str+="<div class=\"input-group\"  style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\"><i class=\"icon icon-info\"></i></span>\n" +
+                    "                    <input type=\"text\" class=\"form-control\" placeholder=\"介绍\" id=\"introduce\">\n" +
+                    "                </div>"
+                str+="<div class=\"input-group\"  style='margin-top: 10px'> \n" +
+                    "                    <span class=\"input-group-addon\"><i class=\"icon icon-file-image\"></i></span>\n" +
+                    "                    <input type=\"file\" class=\"form-control\"  id=\"gimgpath\" >\n" +
+                    "                </div>";
+                str+="<div class=\"input-group\"  style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\"><i class=\"icon icon-unlock-alt\"></i></span>\n" +
+                    "                    <select class=\"form-control\" name=\"status\" id=\"status\">\n" +
+                    "                        <option value=\"1\">上架</option>\n" +
+                    "                        <option value=\"0\">待上架</option>\n" +
+                    "                    </select>\n" +
+                    "                </div>";
+                str+="<div class=\"input-group\"  style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\"><i class=\"icon icon-info\"></i></span>\n" +
+                    "                    <input type=\"text\" class=\"form-control\" placeholder=\"库存\" id=\"stock\">\n" +
+                    "                </div>"
+                str+="<div class=\"input-group\" style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\">@</span>\n" +
+                    "                    <select class=\"form-control\" id=\"primarycate\" onchange=\"primarycateChange(this.options[this.options.selectedIndex].value,'secondarycateselect') \">" +
+                    "                        <option value=\"100\">一级类别</option>\n";
+                for(var i=0;i<primarycates.length;i++){
+                    var primarycate=primarycates[i]
+                    str+= "                        <option value=\""+primarycate.pcId+" \">"+primarycate.pcName+"</option>" ;
+                }
+                str+="                    </select>\n" +
+                    "                </div>"
+                str+="<div class=\"input-group\" style='margin-top: 10px'>\n" +
+                    "                    <span class=\"input-group-addon\" >@</span>\n" +
+                    "                    <select id=\"secondarycateselect\" class=\"form-control\" >\n" +
+                    "                        <option value=\"100\">二级类别</option>\n" +
+                    "                    </select>\n" +
+                    "                </div>"
+                str+="<button class=\"btn btn-primary\" type=\"submit\" style=\"margin: 10px 300px\" onclick=\"addone()\">确定</button>"
+                goodsinfo.innerHTML=str
+            }
+        });
+    }
+    function primarycateChange(primarycate,selectpanel) {
+        // success(primarycate);
+        $.ajax({
+            type:"get",
+            datatype:"json",
+            url:"/secondarycate/getlistbypcid",
+            data:{
+                pcId:primarycate
+            },
+            success:function(secondarycates){
+                var secondarycateselect=document.getElementById(selectpanel);
+                var str= ""
+                str+="                        <option value=\"100\">二级类别</option>\n" ;
+                for(var i=0;i<secondarycates.length;i++){
+                    var secondarycate=secondarycates[i]
+                    str+= "                        <option value=\""+secondarycate.scId+" \">"+secondarycate.scName+"</option>" ;
+                }
+                secondarycateselect.innerHTML=str;
+            }
+        });
+    }
+    initpage();
+    function initpage() {
+        pagesstatus=1;
+        $('#myPage').show()
+        $("#researchpanel").show()
+        $('#researchpane2').hide()
+        var name=document.getElementById("name");
+        var state=document.getElementById("state");
+        var id=document.getElementById("id");
+        $.ajax({
+            type:"get",
+            url:"/goods/page",
+            data:{
+                pagesize:pagesize,
+                start:start,
+                name:name.value,
+                id:id.value,
+                status:state.value
+            },
+            datatype:"json",
+            success:function (data) {
+            // console.log(data)
+                count=data.goodslist.total;
+                allpage=data.goodslist.pages;
+                var myPager = $('#myPage').data('zui.pager');
+                myPager.set({
+                    page:start,
+                    recTotal: count,
+                    recPerpage:pagesize,
+                    lang:"zh_cn"
+                });
+                var str="";
+                str+="<thead class=\"success\" >\n" +
+                    "                    <tr>\n" +
+                    "                        <td>编号</td>\n" +
+                    "                        <td>名称</td>\n" +
+                    "                        <td>介绍</td>\n" +
+                    "                        <td>类别</td>\n" +
+                    "                        <td>价格</td>\n" +
+                    "                        <td>库存</td>\n" +
+                    "                        <td>销量</td>\n" +
+                    "                        <td>图片</td>\n" +
+                    "                        <td>状态</td>\n" +
+                    "                        <td>操作</td>\n" +
+                    "                    </tr>\n" +
+                    "                </thead>\n" ;
+                for(var i=0;i<data.goodslist.records.length;i++){
+                    var goods=data.goodslist.records[i];
+                    var secandarycate=data.secandarycatelist[i]
+                    var gid=goods.goodsId+"";
+                    str+="<tr class='success'>";
+                    str+="<td width='50px'>";
+                    str+=gid;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=goods.goodsName;
+                    str+="</td>";
+                    str+="<td width='80px'>";
+                    str+=goods.goodsIntroduce;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=secandarycate.scName;
+                    str+="</td>";
+                    str+="<td width='50px'>";
+                    str+=goods.goodsPrice;
+                    str+="</td>";
+                    str+="<td width='50px'>";
+                    str+=goods.goodsStock;
+                    str+="</td>";
+                    str+="<td width='50px'>";
+                    str+=goods.goodsNumber;
+                    str+="</td >";
+                    str+="<td>";
+                    str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    if(goods.goodsStatus==1){
+                        str+="已上架"
+                    }else {
+                        str+="未上架"
+                    }
+                    str+="</td>";
+                    str+="<td>";
+                    str+="<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#mySmModal2\" onclick=\"showinfo('"+gid+"','"+goods.goodsName+"','"+goods.goodsIntroduce+"','"+goods.scId+"','"+goods.goodsPrice+"','"+goods.goodsStock+"','"+goods.goodsStatus+"','"+secandarycate.pcId+"')\">修改</button><button type=\"button\" class=\"btn btn-danger\" data-toggle=\"modal\" data-target=\"#mySmModal\" onclick=\"showone('"+gid+"')\">删除</button>";
+                    str+="</td>";
+                    str+="</tr>";
+                }
+                goodsinfo.innerHTML=str;
+            }
+        });
+    }
+    function initialstudentmanager(){
+        start=1;
+        studentmanager()
+    }
+    function studentmanager() {
+        $.ajax({
+            type: "get",
+            datatype: "json",
+            url: "/secondarycate/getlistbypcid",
+            data: {
+                pcId: primarycate
+            },
+            success: function (secondarycates) {
+
+            }
+        })
+    }
+
+</script>

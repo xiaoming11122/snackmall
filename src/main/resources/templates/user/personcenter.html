@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/dist/css/zui.min.css}">
+    <link rel="stylesheet" th:href="@{/dist/css/bootstrap.min.css}">
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script th:src="@{/dist/lib/jquery/jquery.js}"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script th:src="@{/dist/js/zui.min.js}"></script>
+</head>
+<style>
+    td{
+        text-align:center;
+        vertical-align:middle;
+    }
+</style>
+<body>
+<div class="container-fixed-md">
+    <div class="row" style="border-bottom:2px solid #DDDDDD">
+        <div class="col-xs-2 col-xs-offset-1" style="height: 100px;background-image: url(/img/后台图徽.png);background-size:100% 100%;"></div>
+        <div class="col-xs-5 col-xs-offset-4" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-xs-6"><i class="icon icon-user"></i>你好：<span>[[${session.loginuser.adminName}]]</span></div>
+                <div class="col-xs-3"><i class="icon icon-signout"></i><a th:href="@{/admin/adminlogin}">安全退出</a></div>
+                <div class="col-xs-3"><a>修改密码</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
