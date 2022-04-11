@@ -1,7 +1,7 @@
 package com.zxh.mapper;
 
-import com.zxh.entity.Collection;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zxh.entity.Collection;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

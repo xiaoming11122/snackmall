@@ -34,19 +34,23 @@
         <div class="col-xs-3 col-xs-offset-1">
             <div class="row">
 
-                <div class="col-xs-6" style="margin-top: 10px">
+                <div class="col-xs-12" style="margin-top: 10px">
                     <span hidden id="userid" style="font-size: 18px;font-weight: 800" >[[${session.loginuser2.userId}]]</span>
                     用户：<span style="font-size: 18px;font-weight: 800" >[[${session.loginuser2.userName}]]</span>
                 </div>
-                <div class="col-xs-6" style="margin-top: 10px"><a style="font-size: 18px;font-weight: 800">购物车</a></div>
-                <div class="col-xs-6" style="margin-top: 10px"><a style="font-size: 18px;font-weight: 800">订单管理</a></div>
+                <div class="col-xs-6" style="margin-top: 10px" >
+                    <i class="icon icon-signout"></i><a th:href="@{/}">安全退出</a>
+                </div>
+                <div class="col-xs-6" style="margin-top: 10px" >
+                    <a>个人中心</a>
+                </div>
             </div>
         </div>
     </div>
     <div style="width: 102.2%; height: 30px;margin-left: -1.1%">
         <nav class="navbar navbar-default" role="navigation" style="border-radius: initial">
             <ul class="nav navbar-nav nav-justified" style="padding-right: 0px;z-index: 999">
-                <li class="active"><a th:href="@{/user/usermain.html}">首页</a></li>
+                <li ><a th:href="@{/user/usermain.html}">首页</a></li>
                 <li><a onclick="showgoodspage()">零食中心</a></li>
                 <li class=""><a onclick="showorder()">购物车</a></li>
                 <li><a onclick="initialservicemanager()">订单</a></li>
@@ -79,6 +83,7 @@
    var start=1;
    var pagesstatus=1;
    var scid;
+
    userinitialpage()
    $(function () {
        $('#myPage').on('onPageChange', function(e, state, oldState) {
@@ -153,9 +158,11 @@
                 fail("加入收藏失败")
             }else if(data==1){
                 success("加入收藏成功")
+                getAllpcandsc()
             }else if(data==2){
                 fail("已有收藏")
             }
+
            }
        })
    }
@@ -395,9 +402,23 @@
                         "                            <a href='/goods/details?goodsid="+goods.goodsId+"'><img src=\""+goods.goodsPic+"\" alt=\"\"></a>\n" +
                         "                            <div class=\"card-heading\"><strong>"+goods.goodsName+"</strong></div>\n" +
                         "                            <div class=\"card-content text-muted\">"+goods.goodsPrice+"</div>\n" +
-                        "                            <div class=\"\">\n" +
-                        "                                <button onclick=\"colletionaddone('"+goods.goodsId+"')\"  type=\"button\" class=\"btn btn-danger\"><i class=\"icon-heart\"></i> 收藏</button>\n" +
-                        "                                <div class=\"pull-right text-danger\"><i class=\"icon-heart-empty\"></i> 520 人喜欢</div>\n" +
+                        "                            <div class=\"\">\n" ;
+                    var flag=0;
+                    for(var j=0;j<data.usercollectionlist.length;j++){
+                        if(data.usercollectionlist[j].goodsId==goods.goodsId){
+                            flag=1;
+                            break;
+                        }
+                    }
+                    if(flag==1){
+                        str+="<button onclick=\"colletionaddone('"+goods.goodsId+"')\"  type=\"button\" class=\"btn btn-danger\"> 已收藏</button>\n" ;
+                    }else {
+                        str+="<button onclick=\"colletionaddone('"+goods.goodsId+"')\"  type=\"button\" class=\"btn btn-danger\"><i class=\"icon-heart\"></i> 收藏</button>\n" ;
+                    }
+
+                    str+=  "<div class=\"pull-right text-danger\"><i class=\"icon-heart-empty\"></i>" ;
+                    str+=data.collectionlist[m].sum+"&nbsp人喜欢"
+                    str+=   "</div>\n" +
                         "                            </div>\n" +
                         "                        </a>\n" +
                         "                    </div>\n" ;
@@ -499,6 +520,48 @@
            }
        })
    }
+   function cancelrefund(serviceid) {
+       $.ajax({
+           type: "get",
+           datatype: "json",
+           url: "/service/cancelrefund",
+           data: {
+               serviceid:serviceid
+           },
+           success: function (data) {
+               if (data==0){
+                   fail("取消失败")
+               }else if(data==1){
+                   success("取消成功")
+               }else if(data==2){
+                   fail("订单不存在")
+               }
+               servicemanager()
+           }
+       })
+   }
+
+
+   function completeservice(serviceid) {
+       $.ajax({
+           type: "get",
+           datatype: "json",
+           url: "/service/completeservice",
+           data: {
+               serviceid: serviceid
+           },
+           success: function (data) {
+               if (data == 0) {
+                   fail("申请成功")
+               } else if (data == 1) {
+                   success("订单完成")
+               } else if (data == 2) {
+                   fail("订单不存在")
+               }
+               servicemanager()
+           }
+       })
+   }
    function refund(serviceid) {
        $.ajax({
            type: "get",
@@ -535,6 +598,7 @@
                start: start,
                pagesize: pagesize,
                userid:$('#userid').text()
+
            },
            success: function (data) {
                console.log(data)
@@ -595,15 +659,32 @@
                    }else if(service.serviceStatus==2){
                        str+="审核完成"
                    }else if(service.serviceStatus==3){
-                       str+="订单完成"
+                       str+="审核通过"
+                   }else if(service.serviceStatus==4){
+                       str+="被拒接"
+                   }else if(service.serviceStatus==5){
+                       str+"订单完成"
                    }
                    str+="</td>";
                    str+="<td width='100px'>";
                    str+=service.createTime.slice(0,10)+'<br>'+service.createTime.slice(11,19);
                    str+="</td>";
                    str+="<td>";
-                   str+= "<button type=\"button\" class=\"btn btn-success\" onclick=\"refund('"+service.serverId+"')\">申请退款</button>";
-                   str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"servicedeleteone('"+service.serverId+"')\">删除</button>";
+
+
+                   if(service.orderStatus==1){
+                       str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"servicedeleteone('"+service.serverId+"')\">删除</button>";
+                   }else if(service.orderStatus==0){
+                       if(service.serviceStatus!=3 && service.serviceStatus!=4){
+                           str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"completeservice('"+service.serverId+"')\">确认收货</button>";
+                           if(service.serviceCage==0){
+                               str+= "<button type=\"button\" class=\"btn btn-success\" onclick=\"refund('"+service.serverId+"')\">申请退款</button>";
+                           }
+                           if (service.serviceCage==1){
+                               str+= "<button type=\"button\" class=\"btn btn-success\" onclick=\"cancelrefund('"+service.serverId+"')\">取消退款</button>";
+                           }
+                       }
+                   }
                    str+="</td>";
                    str+="</tr>";
                }

@@ -46,6 +46,12 @@ public class User implements Serializable {
 
     private Integer userStatus;
 
+    private Integer userAge;
+
+    private String userSex;
+
+    private String userRemark;
+
     @TableLogic
     private Integer deleted;
 

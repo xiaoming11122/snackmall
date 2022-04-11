@@ -47,9 +47,14 @@
                     <li>
                         <a onclick="initialstudentmanager()"><i class="icon icon-th"></i>学生管理</a>
                     </li>
-                    <li><a href="#"><i class="icon icon-th"></i>销量统计</a></li>
-                    <li><a href="#"><i class="icon icon-th"></i>订单管理</a></li>
-
+<!--                    <li><a href="#"><i class="icon icon-th"></i>销量统计</a></li>-->
+                    <li><a href="#"><i class="icon icon-th"></i>订单管理</a>
+                        <ul>
+                            <li><a onclick="initialservicemanager()">退款申请单</a></li>
+<!--                            <li ><a onclick="recommendnewpanel()">未确认的订单</a></li>-->
+                            <li ><a onclick="completeservicemanager()">完成的订单</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -86,6 +91,18 @@
                     <button class="btn btn-default" type="button" onclick="researhrecommend()">搜索</button>
                 </span>
                 </div>
+                    <div class="input-group" id="researchpane3">
+                        <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="手机号码" id="userphone">
+                        <select class="form-control" name="status" id="userstate" style="width: 25%;margin: 15px 10px">
+                            <option value="">请选择状态</option>
+                            <option value="0">违规</option>
+                            <option value="1">正常</option>
+                        </select>
+                        <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="姓名" id="username">
+                        <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick="userresearch()">搜索</button>
+                </span>
+                    </div>
                     <table class="table" style="color: blue;" id="goodsinfo">
                     </table>
                 </div>
@@ -202,6 +219,57 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="mySmModal4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">修改用户信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="user_id" type="text" class="form-control" placeholder="" readonly>
+                        <label for="user_id" class="input-control-label-left text-right">编号:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="user_name" type="text" class="form-control" placeholder="">
+                        <label for="user_name" class="input-control-label-left text-right">姓名:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="user_age" type="text" class="form-control" placeholder="" >
+                        <label for="user_age" class="input-control-label-left text-right">年龄:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="user_banlance" type="text" class="form-control" placeholder="" >
+                        <label for="user_banlance" class="input-control-label-left text-right">余额:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <select class="form-control" name="user_sex" id="user_sex">
+                            <option value="">请选择</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                        <label for="user_sex" class="input-control-label-left text-right">性别:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <select class="form-control" name="user_sex" id="user_status">
+                            <option value="0">违规</option>
+                            <option value="1">正常</option>
+                        </select>
+                        <label for="user_status" class="input-control-label-left text-right">状态:</label>
+                    </div>
+                    <div class="input-control has-label-left" style="margin-top: 5px">
+                        <input id="user_remark" type="text" class="form-control" placeholder="" >
+                        <label for="user_remark" class="input-control-label-left text-right">备注:</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="updateuserone()">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 
@@ -221,6 +289,10 @@
     var start=1;
     var pagesstatus=1;
     var count=0;
+    var servicecate;
+    var servicestatus;
+    var orderstatus
+    var orderselect
     $(function () {
         $('#myPage').on('onPageChange', function(e, state, oldState) {
             if (state.page !== oldState.page) {
@@ -230,6 +302,10 @@
                         initpage();
                     }else if(pagesstatus==2){
                         recommendmanagerinitial();
+                    }else if(pagesstatus==3){
+                        studentmanager()
+                    }else if(pagesstatus==4){
+                        servicemanager()
                     }
                 }
             }
@@ -239,12 +315,36 @@
         start=1
         recommendmanagerinitial();
     }
-
+    function updateuserone(){
+        $('#mySmModal4').modal('hide', 'fit');
+        $.ajax({
+            type: "GET",
+            url: "/user/updateone",
+            data: {
+                userId: $("#user_id").val(),
+                userName:$("#user_name").val(),
+                userAge:$("#user_age").val(),
+                userSex:$("#user_sex").val(),
+                userBalance:$("#user_banlance").val(),
+                userStatus:$("#user_status").val(),
+                userRemark:$("#user_remark").val()
+            },
+            success: function (data) {
+                if(data==1){
+                    success("修改成功")
+                }else if(data==0){
+                    fail("修改失败")
+                }
+                studentmanager();
+            }
+        })
+    }
     function recommendmanagerinitial(){
         pagesstatus=2
         $("#researchpanel").hide()
         $('#researchpane2').show()
         $("#myPage").show()
+        $("#researchpane3").hide()
         var goodsid=document.getElementById("goodsid2");
         var recommendstatus=document.getElementById("recommendstatus2");
         var recommendleve=document.getElementById("recommendleve2");
@@ -463,6 +563,16 @@
         })
         $("#goodsprimarycate").val(pcid)
     }
+
+    function usershowinfo(id,name,age,sex,banlance,status,remark) {
+        $("#user_id").val(id)
+        $("#user_name").val(name)
+        $("#user_age").val(age)
+        $("#user_sex").val(sex)
+        $("#user_banlance").val(banlance)
+        $("#user_status").val(status)
+        $("#user_remark").val(remark)
+    }
     function showrecommendone(id) {
         deletepenal.innerHTML="<br><span style='margin: 10px 75px'>确定要删除推荐商品：&nbsp&nbsp<b>"+id+"</b>"
             +"<button class=\"btn btn-primary\" type=\"button\" onclick='deleterecommendone("+id+")' style='margin: 10px 120px" +
@@ -517,6 +627,7 @@
         $('#myPage').hide()
         $("#researchpanel").hide()
         $("#researchpane2").hide()
+        $("#researchpane3").hide()
 
         str=""
         str+="<div class=\"input-group\" style='margin-top: 15px'>\n" +
@@ -552,6 +663,7 @@
         $('#myPage').hide()
         $("#researchpanel").hide()
         $('#researchpane2').hide()
+        $("#researchpane3").hide()
         $.ajax({
                 type:"get",
                 datatype:"json",
@@ -632,9 +744,10 @@
     initpage();
     function initpage() {
         pagesstatus=1;
-        $('#myPage').show()
-        $("#researchpanel").show()
+        // $('#myPage').show()
+        // $("#researchpanel1").show()
         $('#researchpane2').hide()
+        $("#researchpane3").hide()
         var name=document.getElementById("name");
         var state=document.getElementById("state");
         var id=document.getElementById("id");
@@ -720,20 +833,261 @@
             }
         });
     }
+    function userresearch() {
+        start=1
+        studentmanager();
+    }
     function initialstudentmanager(){
         start=1;
+        pagesstatus=3;
         studentmanager()
     }
     function studentmanager() {
+        $('#myPage').show()
+        $("#researchpanel").hide()
+        $('#researchpane2').hide()
+        $('#researchpane3').show()
+        var name=document.getElementById("username");
+        var state=document.getElementById("userstate");
+        var phone=document.getElementById("userphone");
         $.ajax({
             type: "get",
             datatype: "json",
-            url: "/secondarycate/getlistbypcid",
+            url: "/user/page",
             data: {
-                pcId: primarycate
+                pagesize:pagesize,
+                start:start,
+                status:state.value,
+                phone:phone.value,
+                name:name.value
             },
-            success: function (secondarycates) {
+            success: function (data) {
+                console.log(data)
+                $('#myPage').show()
+                $("#researchpanel").hide()
+                $('#researchpane2').hide()
+                $("#researchpane3").show()
+                count=data.userlist.total;
+                allpage=data.userlist.pages;
+                var myPager = $('#myPage').data('zui.pager');
+                myPager.set({
+                    page:start,
+                    recTotal: count,
+                    recPerpage:pagesize,
+                    lang:"zh_cn"
+                });
+                var str="";
+                str+="<thead class=\"success\" >\n" +
+                    "                    <tr>\n" +
+                    "                        <td>编号</td>\n" +
+                    "                        <td>姓名</td>\n" +
+                    "                        <td>性别</td>\n" +
+                    "                        <td>年龄</td>\n" +
+                    "                        <td>余额</td>\n" +
+                    "                        <td>手机号</td>\n" +
+                    "                        <td>状态</td>\n" +
+                    "                        <td>备注</td>\n" +
+                    "                        <td>操作</td>\n" +
+                    "                    </tr>\n" +
+                    "                </thead>\n" ;
+                for(var i=0;i<data.userlist.records.length;i++){
+                    var user=data.userlist.records[i];
+                    str+="<tr class='success'>";
+                    str+="<td width='50px'>";
+                    str+=user.userId;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=user.userName;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=user.userSex;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=user.userAge;
+                    str+="</td>";
+                    str+="<td width='80px'>";
+                    str+=user.userBalance;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=user.userPhone;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    if(user.userStatus==1){
+                        str+="正常"
+                    }else {
+                        str+="违规"
+                    }
+                    str+="<td width='60px'>";
+                    str+=user.userRemark;
+                    str+="</td>";
+                    str+="</td>";
+                    str+="<td>";
+                    str+="<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#mySmModal4\" onclick=\"usershowinfo('"+user.userId+"','"+user.userName+"','"+user.userAge+"','"+user.userSex+"','"+user.userBalance+"','"+user.userStatus+"','"+user.userRemark+"')\">修改</button>";
+                    str+="</td>";
+                    str+="</tr>";
+                }
+                goodsinfo.innerHTML=str;
+            }
+        })
+    }
+    function  initialservicemanager() {
+        servicecate=1
+        servicestatus=1
+        orderstatus=0;
+        start=1;
+        orderselect=1
+        servicemanager()
+    }
 
+    function consent(serviceid,userid) {
+        $.ajax({
+            type:"get",
+            datatype:"json",
+            url:"/service/consent",
+            data:{
+                serviceid:serviceid,
+                userid:userid
+            },
+            success:function (data) {
+                if(data==1){
+                    success("成功")
+                    servicemanager()
+                }else if(data==0){
+                    fail("失败")
+                }
+            }
+        })
+    }
+    function Refuse(serviceid) {
+        $.ajax({
+            type:"get",
+            datatype:"json",
+            url:"/service/Refuse",
+            data:{
+                serviceid:serviceid
+            },
+            success:function (data) {
+                if(data==1){
+                    success("成功")
+                    servicemanager()
+                }else if(data==0){
+                    fail("失败")
+                }
+            }
+        })
+    }
+    function completeservicemanager() {
+        servicecate=""
+        servicestatus=""
+        orderstatus=1
+        start=1
+        orderselect=3
+        servicemanager()
+    }
+    function servicemanager() {
+        pagesstatus=4
+        $('#myPage').show()
+        $("#researchpanel").hide()
+        $('#researchpane2').hide()
+        $('#researchpane3').hide()
+
+        $.ajax({
+            type: "get",
+            datatype: "json",
+            url: "/service/page",
+            data: {
+                start: start,
+                pagesize: pagesize,
+                userid:$('#userid').text(),
+                servicecate:servicecate,
+                servicestatus:servicestatus,
+                orderstatus:orderstatus
+            },
+            success: function (data) {
+                console.log(data)
+                count=data.servicelist.total;
+                allpage=data.servicelist.pages;
+                var myPager = $('#myPage').data('zui.pager');
+                myPager.set({
+                    page:start,
+                    recTotal: count,
+                    recPerpage: pagesize,
+                    lang:"zh_cn"
+                });
+                var str="";
+                str+="<thead class=\"success\" >\n" +
+                    "                    <tr>\n" +
+                    "                        <td>编号</td>\n" +
+                    "                        <td>用户id</td>\n" +
+                    "                        <td>价格</td>\n" +
+                    "                        <td>数量</td>\n" +
+                    "                        <td>图片</td>\n" +
+                    "                        <td>服务类别</td>\n" +
+                    "                        <td>审核状态</td>\n" +
+                    "                        <td>下单时间</td>\n";
+                    if(orderselect!=3){
+                        str+=   "                        <td>操作</td>\n" ;
+                    }
+
+                    str+="                    </tr>\n" +
+                    "                </thead>\n" ;
+                for(var i=0;i<data.goodslist.length;i++){
+                    var goods=data.goodslist[i];
+                    var gid=goods.goodsId;
+                    var service=data.servicelist.records[i]
+                    str+="<tr class='success'>";
+                    str+="<td width='50px'>";
+                    str+=service.serverId;
+                    str+="</td>";
+                    str+="<td width='60px'>";
+                    str+=service.userId;
+                    str+="</td>";
+                    str+="<td width='50px'>";
+                    str+=service.servicePrice;
+                    str+="</td>";
+                    str+="<td width='50px'>";
+                    str+=service.serviceNumber;
+                    str+="</td>";
+                    str+="<td>";
+                    str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
+                    str+="</td>";
+                    str+="<td width='100px'>";
+                    if(service.serviceCage==0){
+                        str+="正常"
+                    }else if(service.serviceCage==1){
+                        str+="申请退款"
+                    }else if(service.serviceCage==2){
+                        str+="申请赔付"
+                    }
+                    str+="</td>";
+                    str+="<td width='100px'>";
+                    if(service.serviceStatus==0){
+                        str+="无"
+                    }else if(service.serviceStatus==1){
+                        str+="待审核"
+                    }else if(service.serviceStatus==2){
+                        str+="审核完成"
+                    }else if(service.serviceStatus==3){
+                        str+="审核通过"
+                    }else if(service.serviceStatus==4){
+                        str+="被拒接"
+                    }
+                    str+="</td>";
+                    str+="<td width='100px'>";
+                    str+=service.createTime.slice(0,10)+'<br>'+service.createTime.slice(11,19);
+                    str+="</td>";
+                    str+="<td>";
+                    if(orderselect==1){
+                        str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"Refuse('"+service.serverId+"')\">拒接</button>";
+                        str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"consent('"+service.serverId+"','"+service.userId+"')\">同意</button>";
+
+                    }
+                    str+="</td>";
+                    str+="</tr>";
+                }
+
+                str+= "                    </table>";
+                goodsinfo.innerHTML=str
             }
         })
     }

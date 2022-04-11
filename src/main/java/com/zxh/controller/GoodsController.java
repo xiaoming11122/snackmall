@@ -2,26 +2,22 @@ package com.zxh.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zxh.constants.RecordStateEnum;
 import com.zxh.entity.Goods;
 import com.zxh.entity.Secondarycate;
+import com.zxh.mapper.CollectionMapper;
 import com.zxh.service.GoodsService;
-import com.zxh.service.PrimarycateService;
 import com.zxh.service.business.SecondaryCateBusiness;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -39,6 +35,9 @@ public class GoodsController {
 
     @Resource
     GoodsService goodsService;
+
+    @Resource
+    private CollectionMapper collectionMapper;
 
     @Resource
     SecondaryCateBusiness secondaryCateBusiness;

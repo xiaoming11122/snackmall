@@ -1,25 +1,28 @@
 package com.zxh.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zxh.constants.LoginStateEnum;
 import com.zxh.constants.RecordStateEnum;
-import com.zxh.entity.Admin;
 import com.zxh.entity.User;
 import com.zxh.service.UserService;
 import com.zxh.utils.VerifyCodeUtils;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -85,6 +88,34 @@ public class UserController {
             session.setAttribute("loginuser2",user);
             return LoginStateEnum.Success.getCode();
         }
+    }
+    @ResponseBody
+    @GetMapping("/page")
+    public Map<String ,Object> page(Integer start, Integer pagesize,
+                                    @RequestParam(value = "name" ,required = false)String name,
+                                    @RequestParam(value = "status" ,required = false)String status,
+                                    @RequestParam(value = "phone" ,required = false) String phone) {
+        HashMap<String, Object> map = new HashMap<>();
+        Page<User> page = new Page<>(start, pagesize);
+        LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
+        if (!Strings.isEmpty(name)) {
+            wrapper.like(User::getUserName, name);
+        }
+        if (!Strings.isEmpty(status)) {
+            wrapper.eq(User::getUserStatus, status);
+        }
+        if (!Strings.isEmpty(phone)) {
+            wrapper.eq(User::getUserPhone, phone);
+        }
+        userService.page(page, wrapper);
+        map.put("userlist", page);
+        return map;
+    }
+
+    @ResponseBody
+    @GetMapping("updateone")
+    public Integer updateone(User user){
+        return userService.updateById(user)?RecordStateEnum.Success.getCode():RecordStateEnum.Fail.getCode();
     }
 
 }

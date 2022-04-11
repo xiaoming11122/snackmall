@@ -12,14 +12,14 @@ import com.zxh.service.GoodsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -40,12 +40,15 @@ public class CollectionController {
     @ResponseBody
     @GetMapping("addone")
     public int addone(String goodsid, HttpServletRequest request){
-        Collection list = collectionService.getOne(new LambdaQueryWrapper<Collection>().eq(Collection::getGoodsId, goodsid));
+        HttpSession session = request.getSession();
+        User loginuser = (User)session.getAttribute("loginuser2");
+        Collection list = collectionService.getOne(new LambdaQueryWrapper<Collection>()
+                .eq(Collection::getGoodsId, goodsid)
+        .eq(Collection::getUserId,loginuser.getUserId()));
         if(list!=null){
             return 2;
         }
-        HttpSession session = request.getSession();
-        User loginuser = (User)session.getAttribute("loginuser2");
+
         Collection collection=new Collection();
         collection.setGoodsId(Long.parseLong(goodsid));
         collection.setUserId(loginuser.getUserId());
