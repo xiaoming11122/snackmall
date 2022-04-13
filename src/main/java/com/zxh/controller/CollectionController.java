@@ -17,9 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -70,6 +68,10 @@ public class CollectionController {
         ArrayList<Goods> goodslist = new ArrayList<>();
         for (Integer i = 0; i < collectionlist.getRecords().size(); i++) {
             Goods goods = goodsService.getById(collectionlist.getRecords().get(i));
+            if(Objects.isNull(goods)){
+                goods=new Goods();
+                goods.setGoodsName("商品已被下架");
+            }
             goodslist.add(goods);
         }
         map.put("collectionlist",collectionlist);
@@ -77,5 +79,10 @@ public class CollectionController {
         return map;
     }
 
+    @ResponseBody
+    @GetMapping("batchdelete")
+    public Integer batchdelete(String[] cids){
+        return collectionService.removeByIds(Arrays.asList(cids))?RecordStateEnum.Success.getCode():RecordStateEnum.Fail.getCode();
+    }
 }
 

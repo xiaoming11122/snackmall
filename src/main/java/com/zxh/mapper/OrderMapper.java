@@ -4,6 +4,7 @@ package com.zxh.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zxh.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -15,5 +16,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface OrderMapper extends BaseMapper<Orders> {
+    public Long addoneeturnid(@Param(value = "order") Orders order);
 
 }

@@ -3,18 +3,24 @@ package com.zxh.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.zxh.config.AsyncTask;
 import com.zxh.constants.RecordStateEnum;
 import com.zxh.entity.Goods;
 import com.zxh.entity.Orders;
 import com.zxh.entity.Service;
 import com.zxh.entity.User;
+import com.zxh.mapper.OrderMapper;
 import com.zxh.service.*;
 import org.apache.logging.log4j.util.Strings;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -35,12 +41,16 @@ public class ServiceController {
     UserService userService;
 
     @Resource
+    OrderMapper orderMapper;
+    @Resource
     CollectionService collectionService;
     @Resource
     GoodsService goodsService;
 
     @Resource
     OrderService orderService;
+    @Resource
+    AsyncTask asyncTask;
     @ResponseBody
     @GetMapping("addone")
     public Integer addone(@RequestParam(required = false,value = "orderid") String orderid, String goodsid, String price, String number, HttpServletRequest request){
@@ -112,7 +122,12 @@ public class ServiceController {
         serviceService.page(page,serviceLambdaQueryWrapper);
         List<Goods> goodslist=new ArrayList<>();
         page.getRecords().stream().map(e -> e.getGoodsId()).forEach(x->{
-           goodslist.add(goodsService.getById(x));
+            Goods goods = goodsService.getById(x);
+            if(Objects.isNull(goods)){
+                goods=new Goods();
+                goods.setGoodsName("商品已被下架");
+            }
+            goodslist.add(goods);
         });
         map.put("servicelist",page);
         map.put("goodslist",goodslist);
@@ -192,6 +207,45 @@ public class ServiceController {
         service.setServiceCage(1);
         service.setServiceStatus(3);
         return serviceService.updateById(service) ?RecordStateEnum.Success.getCode():RecordStateEnum.Fail.getCode();
+    }
+    @ResponseBody
+    @GetMapping("statisticsservice")
+    public void statisticsservice(@RequestParam("starttime") @DateTimeFormat(pattern="yyyy-MM-dd") Date starttime,
+                                  @RequestParam("endtime") @DateTimeFormat(pattern="yyyy-MM-dd") Date endtime){
+        SimpleDateFormat ft1 = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+        String starttimestr="to_days(create_time) >= TO_DAYS('"+ft1.format(starttime)+"')";
+        String endtimestr="to_days(create_time) <=TO_DAYS('"+ft1.format(endtime)+"')";
+        LambdaQueryWrapper<Service> serviceLambdaQueryWrapper = new LambdaQueryWrapper<>();
+
+        serviceLambdaQueryWrapper.apply(!Objects.isNull(starttime),starttimestr)
+                .apply(!Objects.isNull(endtime), endtimestr)
+                .orderByDesc(Service::getCreateTime);
+        List<Service> serviceList = serviceService.list(serviceLambdaQueryWrapper);
+        int k=1;
+    }
+    @ResponseBody
+    @GetMapping("/testTransactional")
+    @Transactional(rollbackFor = Exception.class)
+    public Integer test(){
+        try{
+            userService.save(new User());
+            orderMapper.addoneeturnid(new Orders());
+        }catch (Exception e){
+            System.out.println("事务回滚");
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+        }
+        return 1;
+    }
+    @ResponseBody
+    @GetMapping("/testAsync")
+    public String test2() throws InterruptedException {
+        long currentTimeMillis = System.currentTimeMillis();
+        asyncTask.task01();
+        asyncTask.task02();
+        asyncTask.task03();
+        Thread.sleep(100);
+        long currentTimeMillis1 = System.currentTimeMillis();
+        return "task任务耗时" + (currentTimeMillis1 - currentTimeMillis);
     }
 }
 

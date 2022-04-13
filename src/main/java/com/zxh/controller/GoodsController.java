@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zxh.constants.RecordStateEnum;
 import com.zxh.entity.Goods;
 import com.zxh.entity.Secondarycate;
-import com.zxh.mapper.CollectionMapper;
 import com.zxh.service.GoodsService;
 import com.zxh.service.business.SecondaryCateBusiness;
 import org.apache.logging.log4j.util.Strings;
@@ -35,9 +34,6 @@ public class GoodsController {
 
     @Resource
     GoodsService goodsService;
-
-    @Resource
-    private CollectionMapper collectionMapper;
 
     @Resource
     SecondaryCateBusiness secondaryCateBusiness;
@@ -114,8 +110,16 @@ public class GoodsController {
         session.setAttribute("goods",goods);
         return "/user/goodsdetails";
     }
-
-
+    @GetMapping("/batchdelete")
+    public int delete(String[] ids){
+        return goodsService.removeByIds(Arrays.asList(ids))?RecordStateEnum.Success.getCode():RecordStateEnum.Fail.getCode();
+    }
+    @ResponseBody
+    @PostMapping("/testupdateone")
+    public int testupdateone(MultipartFile image) throws IOException {
+        long size = image.getSize();
+        return Integer.parseInt(size+"");
+    }
 
 }
 

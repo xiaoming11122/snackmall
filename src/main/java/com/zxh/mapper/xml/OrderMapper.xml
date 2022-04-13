@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zxh.mapper.OrderMapper">
+    <insert id="addoneeturnid" parameterType="com.zxh.entity.Orders" useGeneratedKeys="true" keyProperty="order_id"  keyColumn="orderId">
+        insert  into orders (user_id,goods_id,price,`number`,create_time,update_time)
+        values (#{order.userId},#{order.goodsId},#{order.price},#{order.number},#{order.createTime},#{order.updateTime})
+    </insert>
 
 </mapper>

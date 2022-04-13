@@ -47,11 +47,11 @@
                     <li>
                         <a onclick="initialstudentmanager()"><i class="icon icon-th"></i>学生管理</a>
                     </li>
-<!--                    <li><a href="#"><i class="icon icon-th"></i>销量统计</a></li>-->
+                    <li><a href="#"><i class="icon icon-th"></i>销量统计</a></li>
                     <li><a href="#"><i class="icon icon-th"></i>订单管理</a>
                         <ul>
                             <li><a onclick="initialservicemanager()">退款申请单</a></li>
-<!--                            <li ><a onclick="recommendnewpanel()">未确认的订单</a></li>-->
+                            <li ><a onclick="unfinishedservicemanager()">未确认正常订单</a></li>
                             <li ><a onclick="completeservicemanager()">完成的订单</a></li>
                         </ul>
                     </li>
@@ -101,6 +101,24 @@
                         <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="姓名" id="username">
                         <span class="input-group-btn">
                     <button class="btn btn-default" type="button" onclick="userresearch()">搜索</button>
+                </span>
+                    </div>
+                    <div class="input-group" id="researchpane4">
+                        <input type="text" class="form-control" style="width: 25%;margin: 15px 20px" placeholder="用户编号" id="userId">
+                        <select class="form-control" name="servicecate" id="servicecate" style="width: 25%;margin: 15px 10px">
+                            <option value="">服务类别</option>
+                            <option value="0">正常</option>
+                            <option value="1">申请退款</option>
+                        </select>
+                        <select class="form-control" name="servicestatus" id="servicestatus" style="width: 25%;margin: 15px 10px">
+                            <option value="">服务状态</option>
+                            <option value="0">无</option>
+                            <option value="1">待审核</option>
+                            <option value="3">审核通过</option>
+                            <option value="4">被拒接</option>
+                        </select>
+                        <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick="serviceresearch()">搜索</button>
                 </span>
                     </div>
                     <table class="table" style="color: blue;" id="goodsinfo">
@@ -628,6 +646,7 @@
         $("#researchpanel").hide()
         $("#researchpane2").hide()
         $("#researchpane3").hide()
+        $('#researchpane4').hide()
 
         str=""
         str+="<div class=\"input-group\" style='margin-top: 15px'>\n" +
@@ -664,6 +683,7 @@
         $("#researchpanel").hide()
         $('#researchpane2').hide()
         $("#researchpane3").hide()
+        $('#researchpane4').hide()
         $.ajax({
                 type:"get",
                 datatype:"json",
@@ -744,10 +764,11 @@
     initpage();
     function initpage() {
         pagesstatus=1;
-        // $('#myPage').show()
-        // $("#researchpanel1").show()
+        $('#myPage').show()
+        $("#researchpanel1").show()
         $('#researchpane2').hide()
         $("#researchpane3").hide()
+        $('#researchpane4').hide()
         var name=document.getElementById("name");
         var state=document.getElementById("state");
         var id=document.getElementById("id");
@@ -847,6 +868,7 @@
         $("#researchpanel").hide()
         $('#researchpane2').hide()
         $('#researchpane3').show()
+        $('#researchpane4').hide()
         var name=document.getElementById("username");
         var state=document.getElementById("userstate");
         var phone=document.getElementById("userphone");
@@ -938,7 +960,6 @@
         orderselect=1
         servicemanager()
     }
-
     function consent(serviceid,userid) {
         $.ajax({
             type:"get",
@@ -977,12 +998,29 @@
         })
     }
     function completeservicemanager() {
-        servicecate=""
-        servicestatus=""
+        servicecate=$("#servicecate").val()
+        servicestatus=$("#servicestatus").val()
         orderstatus=1
         start=1
         orderselect=3
         servicemanager()
+    }
+    function unfinishedservicemanager() {
+        start=1
+        servicestatus=0
+        servicecate=0
+        orderstatus=0
+        orderselect=2
+        servicemanager()
+    }
+    function serviceresearch() {
+       if(orderselect==1){
+           initialservicemanager()
+       }else if(orderselect==2){
+           unfinishedservicemanager()
+       }else if(orderselect==3){
+           completeservicemanager()
+       }
     }
     function servicemanager() {
         pagesstatus=4
@@ -990,7 +1028,7 @@
         $("#researchpanel").hide()
         $('#researchpane2').hide()
         $('#researchpane3').hide()
-
+        $('#researchpane4').show()
         $.ajax({
             type: "get",
             datatype: "json",
@@ -998,7 +1036,7 @@
             data: {
                 start: start,
                 pagesize: pagesize,
-                userid:$('#userid').text(),
+                userid:$('#userId').val(),
                 servicecate:servicecate,
                 servicestatus:servicestatus,
                 orderstatus:orderstatus
@@ -1025,7 +1063,7 @@
                     "                        <td>服务类别</td>\n" +
                     "                        <td>审核状态</td>\n" +
                     "                        <td>下单时间</td>\n";
-                    if(orderselect!=3){
+                    if(orderselect==1){
                         str+=   "                        <td>操作</td>\n" ;
                     }
 

@@ -18,6 +18,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * <p>
@@ -61,6 +62,10 @@ public class OrderController {
         orderservice.page(page,new LambdaQueryWrapper<Orders>().eq(Orders::getOrderStatus,0).eq(Orders::getUserId,Long.parseLong(userid)));
         for (int i = 0; i < page.getRecords().size(); i++) {
             Goods goods = goodsService.getById(page.getRecords().get(i).getGoodsId());
+            if (Objects.isNull(goods)){
+                goods=new Goods();
+                goods.setGoodsName("商品已被下架");
+            }
             goodsList.add(goods);
         }
         map.put("orderlist",page);

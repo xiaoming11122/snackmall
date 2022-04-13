@@ -144,7 +144,38 @@
        start=1
        colletionmanager();
    }
+   function getMore(){
+       if($('input[name="gids"]:checked').length==1){
+           $('input[name="gid"]').prop('checked',true)
+       }else{
+           $('input[name="gid"]').prop('checked',false)
+       }
 
+   }
+   function getckeckvalue(){
+       var arr=[]
+       $('input[name="gid"]:checked').each(function(){
+           arr.push($(this).val());
+       });
+       var cids=arr.join(',')
+
+       $.ajax({
+           type: "get",
+           datatype: "json",
+           url: "/collection/batchdelete",
+           data: {
+               cids: cids
+           },
+           success: function (data) {
+                if(data==1){
+                    success("批量删除成功")
+                }else if(data==0){
+                    fail("批量删除失败")
+                }
+                colletionmanager();
+           }
+       })
+   }
    function colletionaddone(goodsid) {
        $.ajax({
            type: "get",
@@ -253,9 +284,16 @@
                    str+="<td width='50px'>";
                    str+=order.number;
                    str+="</td>";
-                   str+="<td>";
-                   str+="<img  width='60px' height='60px' src='"+goods.goodsPic+"'>";
-                   str+="</td>";
+                   if(goods.goodsPic!=null){
+                       str+="<td>";
+                       str+="<img  width='60px' height='60px' src='"+goods.goodsPic+"'>";
+                       str+="</td>";
+                   }
+                   else{
+                       str+="<td >";
+                       str+=goods.goodsName;
+                       str+="</td>";
+                   }
                    str+="<td width='100px'>";
                    str+=order.createTime.slice(0,10)+'<br>'+order.createTime.slice(11,19);
                    str+="</td>";
@@ -455,9 +493,11 @@
                    lang:"zh_cn"
                });
                var str="";
+               str+="<button type=\"button\" class=\"btn btn-danger\"  onclick='getckeckvalue()'>批量删除</button>"
                str+="<table class=\"table\" style=\"color: blue;\" \n" ;
                str+="<thead class=\"success\" >\n" +
                    "                    <tr>\n" +
+                   "<td><input type=\"checkbox\" name=\"gids\"  onclick=\"getMore()\">选中</input></td>"+
                    "                        <td>商品编号</td>\n" +
                    "                        <td>商品名称</td>\n" +
                    "                        <td>价格</td>\n" +
@@ -471,28 +511,58 @@
                    var gid=goods.goodsId;
                    str+="<tr class='success'>";
                    str+="<td width='100px'>";
-                   str+=gid;
+                   str+="<input type=\"checkbox\" name=\"gid\" value=\""+data.collectionlist.records[i].collectionId+"\" />"
                    str+="</td>";
-                   str+="<td width='100px'>";
-                   str+=goods.goodsName;
-                   str+="</td>";
-                   str+="<td width='50px'>";
-                   str+=goods.goodsPrice;
-                   str+="</td>";
-                   str+="<td>";
-                   str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
-                   str+="</td>";
-                   str+="<td width='60px'>";
-                   if(goods.goodsStatus==1){
-                       str+="已上架"
-                   }else {
-                       str+="未上架"
+                   if (goods.goodsId==null){
+                       str+="<td width='100px'>";
+                       str+=gid;
+                       str+="</td>";
+                       str+="<td width='100px'>";
+                       str+=goods.goodsName;
+                       str+="</td>";
+                       str+="<td width='50px'>";
+                       str+=goods.goodsPrice;
+                       str+="</td>";
+                       str+="<td>";
+                       str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
+                       str+="</td>";
+                       str+="<td width='60px'>";
+                       if(goods.goodsStatus==1){
+                           str+="已上架"
+                       }else {
+                           str+="未上架"
+                       }
+                       str+="</td>";
+                       str+="<td>";
+                       str+="<a type=\"button\" class=\"btn btn-primary\"  href='/goods/details?goodsid="+gid+"'>详情</a><button type=\"button\" class=\"btn btn-danger\" onclick=\"collectiondeleteone('"+data.collectionlist.records[i].collectionId+"')\">删除</button>";
+                       str+="</td>";
+                       str+="</tr>";
+                   }else{
+                       str+="<td width='100px'>";
+                       str+=gid;
+                       str+="</td>";
+                       str+="<td width='100px'>";
+                       str+=goods.goodsName;
+                       str+="</td>";
+                       str+="<td width='50px'>";
+                       str+=goods.goodsPrice;
+                       str+="</td>";
+                       str+="<td>";
+                       str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
+                       str+="</td>";
+                       str+="<td width='60px'>";
+                       if(goods.goodsStatus==1){
+                           str+="已上架"
+                       }else {
+                           str+="未上架"
+                       }
+                       str+="</td>";
+                       str+="<td>";
+                       str+="<a type=\"button\" class=\"btn btn-primary\"  href='/goods/details?goodsid="+gid+"'>详情</a><button type=\"button\" class=\"btn btn-danger\" onclick=\"collectiondeleteone('"+data.collectionlist.records[i].collectionId+"')\">删除</button>";
+                       str+="</td>";
+                       str+="</tr>";
                    }
-                   str+="</td>";
-                   str+="<td>";
-                   str+="<a type=\"button\" class=\"btn btn-primary\"  href='/goods/details?goodsid="+gid+"'>详情</a><button type=\"button\" class=\"btn btn-danger\" onclick=\"collectiondeleteone('"+data.collectionlist.records[i].collectionId+"')\">删除</button>";
-                   str+="</td>";
-                   str+="</tr>";
+
                }
 
                str+= "                    </table>";
@@ -540,8 +610,6 @@
            }
        })
    }
-
-
    function completeservice(serviceid) {
        $.ajax({
            type: "get",
@@ -639,9 +707,16 @@
                    str+="<td width='50px'>";
                    str+=service.serviceNumber;
                    str+="</td>";
-                   str+="<td>";
-                   str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
-                   str+="</td>";
+                   if(goods.goodsPic!=null){
+                       str+="<td>";
+                       str+="<img  width='80px' height='60px' src='"+goods.goodsPic+"'>";
+                       str+="</td>";
+                   }
+                   else{
+                       str+="<td >";
+                       str+=goods.goodsName;
+                       str+="</td>";
+                   }
                    str+="<td width='100px'>";
                    if(service.serviceCage==0){
                        str+="正常"
@@ -671,9 +746,8 @@
                    str+="</td>";
                    str+="<td>";
 
-
                    if(service.orderStatus==1){
-                       str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"servicedeleteone('"+service.serverId+"')\">删除</button>";
+                       str+="已完成订单"
                    }else if(service.orderStatus==0){
                        if(service.serviceStatus!=3 && service.serviceStatus!=4){
                            str+="<button type=\"button\" class=\"btn btn-success\" onclick=\"completeservice('"+service.serverId+"')\">确认收货</button>";
